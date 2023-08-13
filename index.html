@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="https://www.creativefabrica.com/wp-content/uploads/2019/03/Monogram-VL-Logo-Design-by-Greenlines-Studios-580x386.jpg" type="image/x-icon">
+<link rel="shortcut icon" href="https://www.creativefabrica.com/wp-content/uploads/2019/03/Monogram-VL-Logo-Design-by-Greenlines-Studios-580x386.jpg" type="image/x-icon">
+
+        
+        </head>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <title>vaishnavi lugade's Portfolio</title>
+        <title>drop-down profile menu-easy tutorial</title>
         <style>
             *{
                 margin: 0;
@@ -13,7 +16,7 @@
                 box-sizing: border-box;
             }
             body {
-      display: flex;
+      display:flex;
       
       height: 100vh;
       margin: 0;
@@ -30,6 +33,7 @@
                 color: white;
             }
             .hero{
+              
                 width: 100%;
                 min-height: 100vh;
                 background: #eceaff;
@@ -38,6 +42,7 @@
                 box-sizing: border-box;
                 margin: 0;
             padding: 0;
+            
             }
             nav{
                 background: #000;
@@ -46,7 +51,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                z-index: 1000;
                 position: fixed;
+                
             }
             .user-pic{
                 width: 40px;
@@ -273,7 +280,7 @@ transform: skewX(10deg);
   left: 110%;
 }
 
-@media (max-width:1000px){
+@media (max-width:768px){
   .wrapper {
 width: 100%;
 }
@@ -437,6 +444,7 @@ font-size: 30px;
     
   }
   #airplane {
+    
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -500,7 +508,98 @@ font-size: 30px;
     transform: translateX(-50%);
     border-left: 5px dotted #333;
   }
+
+  @media (max-width: 767px) {
+    #skillsChart {
+    width: fit-content;
+    height:70%;
+    margin: 0 auto; 
+    
+    
+  }
+  .chart-container {
+    width: 100%; 
+    height:fit-content; 
+    margin: auto;
+    border: 10px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+  }
+  #animation-container {
+    position: relative;
+    margin: 0 auto; 
+    width: 380px;
+    height:320px;
+    border: 5px solid #333;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation-name: air;
+    
+    
+  }
+  .milestone {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: milestoneAnimation 4s linear infinite;
+  }
   
+  .ssc {
+    
+    bottom: 40px;
+    left: 13px;
+    font-size: x-small;
+    
+  }
+  .hsc {
+    top: 140px;
+    right: 12px;
+    font-size:x-small;
+    
+  }
+  .be {
+    top: 40px;
+    left: 15px;
+    font-size:x-small;
+    
+  }
+  .about{
+            text-align: center;
+            font-size: 25px;
+
+        }
+        .header-content {
+        font-size: 25px;
+        margin-top: auto;
+        padding-top: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .name {
+        
+        font-size: 19px;
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out forwards infinite alternate;
+      }
+      .titles {
+        font-size:larger;
+      margin-top: 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typeWriter 4s steps(40) 1s forwards infinite alternate;
+    }
+   
+
+  }
+
   
 
 
@@ -559,7 +658,7 @@ font-size: 30px;
         <div class="header-content" id="section-home">
             <h1></h1>
             <h1 class="titles">I'm Vaishnavi Lugade</h1>
-            <h2 class="name">Computer Science Student | App Developer | Web Developer</h2>
+            <h2 class="name">Student | App Developer | Web Developer</h2>
             <a class="resume-button" href="https://drive.google.com/file/d/1XcS6l7fi8qYydB6VOaGl6182BnaWRArG/view" target="_blank">Download Resume</a>
           </div><br><br>
         
