@@ -617,7 +617,7 @@ font-size: 30px;
         </style>
     </head>
     <body onload="redirectToEdge()">
-        <div class="hero">
+        <div class="hero" onscroll="checkScroll()">
             <nav>
                 <div class="logo">
                     <h2 onclick="scrollToSection('section-home')"><span style="color: #FCA311">My</span>Portfolio</h2>
@@ -1140,7 +1140,50 @@ font-size: 30px;
   }
 
   repeatAnimation();
+  const contentContainer = document.querySelector('.content');
 
+const storyMessages = [
+    "Welcome to Vaishnavi's portfolio!",
+    "Vaishnavi  is a 2024 graduate of Bachelor of Technology in Computer Science Engineering from Sinhgad Institutes .",
+    "She excels in web development, coding, and problem-solving.",
+    "Click the button below to download her resume!"
+];
+
+let messageIndex = 0;
+let speechInProgress = false;
+
+function checkScroll() {
+    if (!speechInProgress) {
+        updateStoryMessage();
+    }
+}
+
+function updateStoryMessage() {
+    if (messageIndex < storyMessages.length) {
+        speakMessage(storyMessages[messageIndex]);
+        messageIndex++;
+    } else {
+        contentContainer.removeEventListener('scroll', checkScroll);
+    }
+}
+
+function speakMessage(message) {
+    speechInProgress = true;
+    const speech = new SpeechSynthesisUtterance(message);
+    speech.onend = function () {
+        speechInProgress = false;
+        checkScroll(); // Resume story after speech ends
+    };
+    speechSynthesis.speak(speech);
+}
+
+function downloadResume() {
+    // Replace with the actual URL of your resume file
+    const resumeUrl = 'link_to_your_resume.pdf';
+    window.open(resumeUrl, '_blank');
+}
+
+checkScroll();
 
     
 
