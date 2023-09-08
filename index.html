@@ -7,6 +7,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="icon" type="image/x-icon" href="https://tse1.mm.bing.net/th?id=OIP.x-y3tDw18T0jInh2JH3UTgHaE7&pid=Api&P=0&h=180">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 
         <title>Vaishnavi Lugade's Portfolio</title>
         <style>
@@ -294,6 +296,194 @@ transform: skewX(10deg);
     display: inline-block;
     text-align: center;
   }
+    footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 19px 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 20px;
+        }
+  .chatbot-container {
+            background-color: #f5f5f5;
+            border: 2px solid #333;
+            border-radius: 10px;
+            width: 850px;
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .chatbot-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chatbot-messages {
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        .user-message {
+            background-color: #d3ffd3;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .bot-message {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .chatbot-input {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #user-input {
+            flex: 1;
+            height: 40px; 
+            border: 2px solid #333;
+            border-radius: 20px; 
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px; 
+        }
+
+        #send-button {
+            height: 40px; 
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 20px; 
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px; 
+        }
+       
+
+        .toggle-button {
+            width: 30px;
+            height: 30px;
+            background-color: #333; /* Toggle button background color */
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .toggle-button .icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /*.sun {
+            color: #ffdb58; 
+        }
+
+        .moon {
+            color: #fff;
+        }*/
+
+        /* Updated dark mode styles */
+        .dark-mode {
+            background-color: #000; /* Dark mode background color */
+            color: #fff; /* Text color for dark mode */
+        }
+
+        .dark-mode .toggle-button {
+            background-color: #fff; /* Toggle button background color in dark mode */
+        }
+
+        .type{
+      display:flex;
+      
+      justify-content: center;
+    
+  }
+  .tool-bar-container {
+            border: 6px solid black; /* Add black border to the container */
+            padding: 90px;
+            align-self: center;
+            border-radius: 10px;
+            margin-left: 30px;
+            padding-left: 10%;
+            padding-left: 5%;
+        }
+
+        .tool-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tool-card {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            animation: rotateCard 10s infinite linear;
+        }
+
+        .tool-card:hover {
+            animation-play-state: paused;
+        }
+
+        .tool-card .front,
+        .tool-card .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .tool-card .back {
+            transform: rotateY(180deg);
+        }
+
+        .tool-card h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+         @keyframes rotateCard {
+            0%, 100% {
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(180deg);
+            }
+        }
+        
 @media (max-width:768px){
   .wrapper {
 width: 100%;
@@ -351,16 +541,7 @@ font-size: 30px;
     button:hover {
       background-color: #31efa0;
     }
-    footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 19px 0;
-        }
-
-        footer p {
-            font-size: 20px;
-        }
+  
         .certifications-container {
             display: flex;
             flex-wrap: wrap;
@@ -632,6 +813,12 @@ font-size: 30px;
                     <h2 onclick="scrollToSection('section-home')"><span style="color: #FCA311">My</span>Portfolio</h2>
                 </div>
                 <ul>
+                  
+                    
+                        <!--<span class="logo"><i class="icon sun fas fa-sun"></i></span>
+                        <span class="logo"><i class="icon moon fas fa-moon" style="display:none;"></i></span>-->
+                   
+                
                     <li><a class="active" onclick="scrollToSection('section-home')">HOME</a></li>
                     <li><a onclick="scrollToSection('section-about')">ABOUT</a></li>
                     <li><a onclick="scrollToSection('section-projects')" >PROJECTS</a></li>
@@ -699,7 +886,7 @@ font-size: 30px;
             <div class="certification-card">
                 <div class="certification-card-inner">
                     <div class="certification-card-front">
-                        <img src="https://media.licdn.com/dms/image/D5622AQFFGVpZKZmoPA/feedshare-shrink_2048_1536/0/1683549993930?e=1694044800&v=beta&t=rkLPmo7Nx2KgnB5sTh6VKL8GqmIQOVx8k699KHM6Dps" class="certification-image" alt="Certification 1">
+                        <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/codealpha.jpeg?raw=true" class="certification-image" alt="Certification 1">
                     </div>
                     <div class="certification-card-back">
                         <div class="certification-info">
@@ -726,7 +913,7 @@ font-size: 30px;
     <div class="certification-card">
       <div class="certification-card-inner">
           <div class="certification-card-front">
-              <img src="https://media.licdn.com/dms/image/C5622AQEJvsM2IZB_ww/feedshare-shrink_800/0/1678007804853?e=1694044800&v=beta&t=EokS6Nw_wdE8uAeJXZinobZWL7J-VsiI5ChCya31xjg" class="certification-image" alt="Certification 2">
+              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/letsgrowmore.jpeg?raw=true" class="certification-image" alt="Certification 2">
           </div>
           <div class="certification-card-back">
               <div class="certification-info">
@@ -739,7 +926,7 @@ font-size: 30px;
     <div class="certification-card">
       <div class="certification-card-inner">
           <div class="certification-card-front">
-              <img src="https://media.licdn.com/dms/image/C4D22AQFlU90lp9S7pA/feedshare-shrink_2048_1536/0/1675260568631?e=1694044800&v=beta&t=O5T7eyCVldlxUxZpveUX_lFSgLVJmKsF9e_IXWBKokQ" class="certification-image" alt="Certification 2">
+              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/sparks.jpeg?raw=true" class="certification-image" alt="Certification 2">
           </div>
           <div class="certification-card-back">
               <div class="certification-info">
@@ -753,7 +940,7 @@ font-size: 30px;
     <div class="certification-card">
         <div class="certification-card-inner">
             <div class="certification-card-front">
-                <img src="https://media.licdn.com/dms/image/C4D22AQGLXwEL00DQUQ/feedshare-shrink_2048_1536/0/1670042026588?e=1694044800&v=beta&t=1oJAZzD1-7ukGdA-R6OoUt-99x97xAqYu4n9UwIvBxM" class="certification-image" alt="Certification 2">
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/coordinator.jpeg?raw=true" class="certification-image" alt="Certification 2">
             </div>
             <div class="certification-card-back">
                 <div class="certification-info">
@@ -766,7 +953,7 @@ font-size: 30px;
     <div class="certification-card">
         <div class="certification-card-inner">
             <div class="certification-card-front">
-                <img src="https://media.licdn.com/dms/image/C4D22AQE7hc0JBn7dKw/feedshare-shrink_2048_1536/0/1668191295378?e=1694044800&v=beta&t=Ewt2AyHGiYevceJNSlJ5JqGlmuJehKbAl9yog50bwjc" class="certification-image" alt="Certification 2">
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/oasis.jpeg?raw=true" class="certification-image" alt="Certification 2">
             </div>
             <div class="certification-card-back">
                 <div class="certification-info">
@@ -792,7 +979,7 @@ font-size: 30px;
     <div class="certification-card">
         <div class="certification-card-inner">
             <div class="certification-card-front">
-                <img src="https://media.licdn.com/dms/image/C5622AQF8nhknfBQdZQ/feedshare-shrink_2048_1536/0/1647254909293?e=1694044800&v=beta&t=_6J_Y8dHUn2nbDQmo6OBxm5RDHQT2eO_cFmzJiElBxg" class="certification-image" alt="Certification 2">
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/social%20worker.jpeg?raw=true" class="certification-image" alt="Certification 2">
             </div>
             <div class="certification-card-back">
                 <div class="certification-info">
@@ -806,7 +993,7 @@ font-size: 30px;
     <div class="certification-card">
         <div class="certification-card-inner">
             <div class="certification-card-front">
-                <img src="https://media.licdn.com/dms/image/D4D22AQEPBxDbddcXMg/feedshare-shrink_2048_1536/0/1685547449179?e=1694044800&v=beta&t=oX39G3eaI1ELfgpEaaBjV8v46fb3WX012NMTalYuv6g" class="certification-image" alt="Certification 2">
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/python.jpeg?raw=true" class="certification-image" alt="Certification 2">
             </div>
             <div class="certification-card-back">
                 <div class="certification-info">
@@ -819,7 +1006,7 @@ font-size: 30px;
     <div class="certification-card">
         <div class="certification-card-inner">
             <div class="certification-card-front">
-                <img src="https://media.licdn.com/dms/image/C4D22AQG2FLuj01FqAQ/feedshare-shrink_2048_1536/0/1665754852327?e=1694044800&v=beta&t=kDIRWrDClAMdzlWTrW6Rwpe0kt_3X_x2PZmVJwMgXlU" class="certification-image" alt="Certification 2">
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/java.jpeg?raw=true" class="certification-image" alt="Certification 2">
             </div>
             <div class="certification-card-back">
                 <div class="certification-info">
@@ -832,7 +1019,7 @@ font-size: 30px;
     <div class="certification-card">
         <div class="certification-card-inner">
             <div class="certification-card-front">
-                <img src="https://media.licdn.com/dms/image/C5622AQFM5xRWkUg2VQ/feedshare-shrink_2048_1536/0/1648536866284?e=1694044800&v=beta&t=IiFp1M17Jo-4Pbet3ABho4FeaZ0TfWNbRSgpGQ_7tqQ" class="certification-image" alt="Certification 2">
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/hackathon.jpeg?raw=true" class="certification-image" alt="Certification 2">
             </div>
             <div class="certification-card-back">
                 <div class="certification-info">
@@ -985,8 +1172,62 @@ font-size: 30px;
             <canvas id="skillsChart"></canvas>
           </div>
           </div>
+          <h1>................................................................................................................................................</h1><br>
+          <div class="wrapper" id="section-skills">
+            <h2>
+          Tools</h2>
+          <div class="line">
+          </div>
+          <div class="type">
+          <div class="tool-bar-container">
+            <div class="tool-container">
+                <!-- Repeat the same tool elements here -->
+                <div class="tool-card">
+                    <div class="front">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.ORnlsvc38UKkWSEyDmZjggHaHa&pid=Api&P=0&h=180" alt="Tool 1">
+                        
+                        
+                    </div>
+                    <div class="back">
+                        <h3><strong>VS CODE</strong></h3>
+                    </div>
+                </div>
         
+                <div class="tool-card">
+                    <div class="front">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.pIi0CfGswG8JLy2f1w6dLQHaHa&pid=Api&P=0&h=180" alt="Tool 2">
+                        
+                        
+                    </div>
+                    <div class="back">
+                        <h3><strong>PYCHARM</strong></h3>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="front">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.zfG8FW1Z61TDDwJjGR2T-AHaIU&pid=Api&P=0&h=180" alt="Tool 2">
+                       
+                       
+                    </div>
+                    <div class="back">
+                        <h3><strong>ANDROID STUDIO</strong></h3>
+                    </div>
+                </div>
         
+                <div class="tool-card">
+                    <div class="front">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.vfM_5nuzjcO4fP6SCdJsAQHaG8&pid=Api&P=0&h=180" alt="Tool 3">
+                        
+                        
+                    </div>
+                    <div class="back">
+                        <h3><strong>ECLIPSE</strong></h3>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+        </div>
         
         
         
@@ -996,15 +1237,17 @@ font-size: 30px;
           contact</h2>
           <div class="line">
           </div>
-        <div class="container">
-            <h1>Contact Me</h1>
-            <form action="contact.php">
-              <input type="text" placeholder="Your Name">
-              <input type="email" placeholder="Your Email">
-              <textarea placeholder="Your Message"></textarea>
-              <button type="submit">Send Message</button>
-            </form>
-</div>
+          <div class="chatbot-container">
+    
+            <div class="chatbot-header">Ask Questions Here!</div>
+            <div class="chatbot-messages" id="chat-messages">
+                <!-- Chatbot messages will be displayed here -->
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
 </div>
 
 
@@ -1012,7 +1255,7 @@ font-size: 30px;
 <footer>
     <p>&copy; 2023 designed by Vaishnavi Lugade</p>
 </footer>
-</div>          
+         
         <script>
             let submenu=document.getElementById("submenu");
             function vaishnavi(){
@@ -1190,7 +1433,120 @@ function speakMessage(message) {
 
 checkScroll();
 
-    
+function toggleTheme(theme) {
+            document.body.className = theme;
+            const moonButton = document.querySelector('.moon-button');
+            const sunButton = document.querySelector('.sun-button');
+            const houseLight = document.querySelector('.house-light');
+            
+            if (theme === 'night-theme') {
+                // Night theme: Set the background to black
+                moonButton.style.display = 'none'; // Hide the moon
+                sunButton.style.display = 'block'; // Show the sun
+                houseLight.style.backgroundColor = 'transparent'; // Light off
+            } else {
+                // Day theme: Set the background to a light color
+                moonButton.style.display = 'block'; // Show the moon
+                sunButton.style.display = 'none'; // Hide the sun
+                houseLight.style.backgroundColor = '#fff'; // Light on
+            }
+        }
+        const chatMessages = document.getElementById("chat-messages");
+        const userInput = document.getElementById("user-input");
+        const sendButton = document.getElementById("send-button");
+
+        function botResponse(message) {
+            const botMessage = document.createElement("div");
+            botMessage.classList.add("bot-message");
+            botMessage.textContent = message;
+            chatMessages.appendChild(botMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getUserMessage() {
+            const userMessage = userInput.value.trim();
+            if (userMessage !== "") {
+                const userDiv = document.createElement("div");
+                userDiv.classList.add("user-message");
+                userDiv.textContent = userMessage;
+                chatMessages.appendChild(userDiv);
+                userInput.value = "";
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Handle user's questions
+                const lowerCaseMessage = userMessage.toLowerCase();
+                if (lowerCaseMessage.includes("mail")) {
+                    botResponse("Sure😊! You can reach me at vaishnavilugade760@gmail.com");
+                } else if (lowerCaseMessage.includes("linkedin")) {
+                    botResponse("You can connect 🔗 with me on LinkedIn: https://www.linkedin.com/in/vaishnavilugade.");
+                } else if (lowerCaseMessage.includes("engineering")) {
+                    botResponse("I'm currently pursuing 🎓 a Bachelor's degree in Computer Science at PAHSU.");
+                }  else if (lowerCaseMessage.includes("coding skills")) {
+                    botResponse("Yes, I have experience in programming languages 👩‍💻 like Python, Java, and Golang. I've also worked on projects.");
+                }  else if (lowerCaseMessage.includes("resume")) {
+                    botResponse("Certainly! Here's a link to my resume: https://drive.google.com/file/d/1ok8diOWVqol1wLxkU70z9nbkTiHClr5J/view.");
+                } else if (lowerCaseMessage.includes("projects")) {
+                    botResponse("I have worked on different projects ,visit my profile to check 👉: github.com/vaishnavilugade.");
+                } else if (lowerCaseMessage.includes("languages ")) {
+                    botResponse("I have expertise in programming languages like java,python,golang and have completed 🛠️ projects using them.");
+                } else if (lowerCaseMessage.includes("achievements")) {
+                    botResponse("I'm the most actvie github user in india with 🥇 rank 13.");
+                } else if (lowerCaseMessage.includes("internship")) {
+                    botResponse("Yes, I've interned 🌟 as web developer,app developer,java developer,artificial intelligence intern with differnt companies.");
+                } else if (lowerCaseMessage.includes("competitions")) {
+                    botResponse("Yes, I've participated in Sinhgad Hackathon 2K22,2K23, where our team worked on projects like grivance system and AI based chatbot.");
+                }   else if (lowerCaseMessage.includes("advice")) {
+                    botResponse("Learn, Fail, Adapt: In engineering, mistakes are stepping stones to success. Learn from failures, adapt, and keep moving forward.");
+                } else if (lowerCaseMessage.includes(" your  projects")) {
+                    botResponse("You can follow me on my LinkedIn profile or check my personal website [vaishnavilugade.github.io] for updates on my projects and activities.");
+                } else if (lowerCaseMessage.includes("ok")) {
+                    botResponse("if you have any questions please ask");
+                } else if (lowerCaseMessage.includes("what questions ")) {
+                    botResponse("about --> projects,compititions,resume,engineering");
+                } else if (lowerCaseMessage.includes("name")) {
+                    botResponse("I am a chatbot specially designed for this portfolio!");
+                } else if (lowerCaseMessage.includes("hii") || lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hey") || lowerCaseMessage.includes("hi")) {
+                    let greeting = getGreeting();
+                    botResponse(greeting);
+                } 
+                else if (lowerCaseMessage.includes("bye") || lowerCaseMessage.includes("see you")) {
+                    botResponse("Have a great day!");
+                } else if (lowerCaseMessage.includes("Thank you") || lowerCaseMessage.includes("Thanks")||lowerCaseMessage.includes("Thnaku")) {
+                    botResponse("Welcome!");
+                }else if (lowerCaseMessage.includes("Good morninig") || lowerCaseMessage.includes("GM")||lowerCaseMessage.includes("Afternoon")||lowerCaseMessage.includes("evening")) {
+                    botResponse("HOw can I assist you today?");
+                }else if (lowerCaseMessage.includes("Night") || lowerCaseMessage.includes("GN")) {
+                    botResponse("Good Night!");
+                } else {
+                    botResponse("Sorry, I can't provide information on that. Feel free to ask something else.");
+                }
+            }
+        }
+
+        sendButton.addEventListener("click", getUserMessage);
+        userInput.addEventListener("keyup", (event) => {
+            if (event.key === "Enter") {
+                getUserMessage();
+            }
+        });
+
+        // Initial greeting from the bot
+        function getGreeting() {
+    const currentTime = new Date().getHours();
+    let greeting = "Hello! How can I assist you today?";
+    if (currentTime >= 5 && currentTime < 12) {
+        greeting = "Good morning! How can I assist you today?";
+    } else if (currentTime >= 12 && currentTime < 17) {
+        greeting = "Good afternoon! How can I assist you today?";
+    } else if (currentTime >= 17 && currentTime < 21) {
+        greeting = "Good evening! How can I assist you today?";
+    } else if (currentTime >= 21 || currentTime < 5) {
+        greeting = "Hello! How can I assist you today?";
+    }
+    return greeting;
+}
+
+        botResponse("welcome to my portfolio!");    
 
 
 
