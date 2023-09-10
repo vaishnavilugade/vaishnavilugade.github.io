@@ -165,10 +165,21 @@
 
     /* Animation for name */
     .name {
-        
-      font-size: 3rem;
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards infinite alternate;
+            
+            letter-spacing: 3px;
+            animation: fadeIn 2s ease-in-out forwards infinite alternate;
+            animation: float 4s infinite ease-in-out alternate;
+        }
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+     
     }
 
     @keyframes fadeIn {
@@ -193,28 +204,41 @@
         width: 0;
       }
       to {
-        width: 54%;
+        width: 60%;
       }
     }
 
     /* Download resume button */
     .resume-button {
-        
-        padding-top: 20%;;
-      margin-top: 80px;
-      background-color: #0c1210;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      cursor: pointer;
-    }
+  margin-top: 80px;
+  background-color: #0c1210;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth animation */
+}
 
-    .resume-button:hover {
-      background-color: #31efa0;
-    }
+.resume-button::after {
+  content: '\2193'; /* Unicode arrow character, you can replace this with your icon */
+  margin-left: 10px; /* Adjust the space between text and icon */
+}
+
+.resume-button:hover {
+  background-color: #31efa0;
+  box-shadow: 0 0 20px black; /* Add box shadow on hover */
+}
+
+.resume-button:active {
+  background-color: #1e9440; /* Change color when button is clicked */
+  box-shadow: none; /* Remove the box shadow when clicked */
+}
+
+
     .wrapper{
   width: 1170px;
   margin: 5% auto;
@@ -553,7 +577,7 @@ font-size: 30px;
             width: 200px;
             height: 180px;
             perspective: 1000px;
-            margin: 20px;
+            margin: 30px;
             cursor: pointer;
         }
 
@@ -605,10 +629,27 @@ font-size: 30px;
             text-align: center;
         }
         .about{
-            text-align: center;
-            font-size: 40px;
-
+            font-size: 2.5rem;
+            background-color: #eceaff;
+            text-align:center;
+            color: #000;
+            border-radius: 5px;
+            padding: 10px;
+            animation:  fadeIn 4s ease-in-out 4s forwards;
+            animation-iteration-count: infinite;
         }
+     
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        
         .chart-container {
     width: 1000px; 
     height: 600px; 
@@ -780,7 +821,7 @@ font-size: 30px;
     }
     .name {
         
-        font-size: 19px;
+        
         opacity: 0;
         animation: fadeIn 2s ease-in-out forwards infinite alternate;
       }
@@ -860,8 +901,8 @@ font-size: 30px;
             </nav>
         <div class="header-content" id="section-home">
             <h1></h1>
-            <h1 class="titles">I'm Vaishnavi Lugade.</h1>
-            <h2 class="name">Student | App Developer | Web Developer</h2>
+            <h1 class="name">I'm Vaishnavi Lugade.</h1>
+            <h4 class="titles">Student | App Developer | Web Developer</h4>
             <a class="resume-button" href="https://drive.google.com/file/d/1ok8diOWVqol1wLxkU70z9nbkTiHClr5J/view?usp=drive_link" target="_blank">Download Resume</a>
           </div><br><br>
         
@@ -875,7 +916,7 @@ font-size: 30px;
              <p><strong>Hello,</strong><br>
                 <strong>I am a <span class="colorful-text">2024</span> graduate of Bachelor of Technology in <span class="colorful-text" >Computer Science Engineering</span><br> from Sinhgad Institutes.</strong><br>
                 </p>
-          </div><br>
+          </div><br><br>
 
         
 
@@ -1479,6 +1520,8 @@ function toggleTheme(theme) {
                     botResponse("Sure😊! You can reach me at vaishnavilugade760@gmail.com");
                 } else if (lowerCaseMessage.includes("linkedin")) {
                     botResponse("You can connect 🔗 with me on LinkedIn: https://www.linkedin.com/in/vaishnavilugade.");
+                }else if (lowerCaseMessage.includes("github")) {
+                    botResponse("You can connect 🔗 with me on github: github.com/vaishnavilugade.");
                 } else if (lowerCaseMessage.includes("engineering")) {
                     botResponse("I'm currently pursuing 🎓 a Bachelor's degree in Computer Science at PAHSU.");
                 }  else if (lowerCaseMessage.includes("coding skills")) {
@@ -1487,7 +1530,7 @@ function toggleTheme(theme) {
                     botResponse("Certainly! Here's a link to my resume: https://drive.google.com/file/d/1ok8diOWVqol1wLxkU70z9nbkTiHClr5J/view.");
                 } else if (lowerCaseMessage.includes("projects")) {
                     botResponse("I have worked on different projects ,visit my profile to check 👉: github.com/vaishnavilugade.");
-                } else if (lowerCaseMessage.includes("languages ")) {
+                } else if (lowerCaseMessage.includes("language ")) {
                     botResponse("I have expertise in programming languages like java,python,golang and have completed 🛠️ projects using them.");
                 } else if (lowerCaseMessage.includes("achievements")) {
                     botResponse("I'm the most actvie github user in india with 🥇 rank 13.");
@@ -1499,24 +1542,36 @@ function toggleTheme(theme) {
                     botResponse("Learn, Fail, Adapt: In engineering, mistakes are stepping stones to success. Learn from failures, adapt, and keep moving forward.");
                 } else if (lowerCaseMessage.includes(" your  projects")) {
                     botResponse("You can follow me on my LinkedIn profile or check my personal website [vaishnavilugade.github.io] for updates on my projects and activities.");
-                } else if (lowerCaseMessage.includes("ok")) {
+                } else if (lowerCaseMessage.includes("ok")||lowerCaseMessage.includes("oh")) {
                     botResponse("if you have any questions please ask");
                 } else if (lowerCaseMessage.includes("what questions ")) {
                     botResponse("about --> projects,compititions,resume,engineering");
-                } else if (lowerCaseMessage.includes("name")) {
+                } else if (lowerCaseMessage.includes("name")||lowerCaseMessage.includes("purpose")) {
                     botResponse("I am a chatbot specially designed for this portfolio!");
-                } else if (lowerCaseMessage.includes("hii") || lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hey") || lowerCaseMessage.includes("hi")) {
+                }else if (lowerCaseMessage.includes("nothing")) {
+                    botResponse("ok😊");
+                } else if (lowerCaseMessage.includes("location")) {
+                    botResponse("Solapur,Maharashtra,India");
+                }else if (lowerCaseMessage.includes("hii") || lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hey") || lowerCaseMessage.includes("hi")) {
                     let greeting = getGreeting();
                     botResponse(greeting);
+                } else if (lowerCaseMessage.includes("hackerrank") ) {
+                    botResponse("sure! here is the link 🔗 of Hackerrank profile  https://www.hackerrank.com/vaishnavilugade?hr_r=1");
+                } else if (lowerCaseMessage.includes("hackerearth") ) {
+                    botResponse("sure! here is the link 🔗 of Hackerearth profile  https://www.hackerearth.com/@vaishnavilugade/");
+                } else if (lowerCaseMessage.includes("leetcode") ) {
+                    botResponse("sure! here is the link 🔗 of Leetcode profile  https://leetcode.com/vaishnavilugade/");
+                } else if (lowerCaseMessage.includes("codechef") ) {
+                    botResponse("sure! here is the link 🔗 of codechef profile  https://www.codechef.com/users/vaishnvilugade");
                 } 
                 else if (lowerCaseMessage.includes("bye") || lowerCaseMessage.includes("see you")) {
                     botResponse("Have a great day!");
-                } else if (lowerCaseMessage.includes("Thank you") || lowerCaseMessage.includes("Thanks")||lowerCaseMessage.includes("Thnaku")) {
+                } else if (lowerCaseMessage.includes("thank you") || lowerCaseMessage.includes("thanks")||lowerCaseMessage.includes("thnaku")) {
                     botResponse("Welcome!");
-                }else if (lowerCaseMessage.includes("Good morninig") || lowerCaseMessage.includes("GM")||lowerCaseMessage.includes("Afternoon")||lowerCaseMessage.includes("evening")) {
-                    botResponse("HOw can I assist you today?");
-                }else if (lowerCaseMessage.includes("Night") || lowerCaseMessage.includes("GN")) {
-                    botResponse("Good Night!");
+                }else if (lowerCaseMessage.includes("morning") || lowerCaseMessage.includes("gm")||lowerCaseMessage.includes("afternoon")||lowerCaseMessage.includes("evening")) {
+                    botResponse("Grettings!How can I assist you today?");
+                }else if (lowerCaseMessage.includes("night") || lowerCaseMessage.includes("gn")) {
+                    botResponse("good night!");
                 } else {
                     botResponse("Sorry, I can't provide information on that. Feel free to ask something else.");
                 }
