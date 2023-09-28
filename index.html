@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
+
         <title>Vaishnavi Lugade's Portfolio</title>
         <style>
             *{
@@ -34,6 +35,9 @@
                 cursor: pointer;
                 margin-left: 0px;
                 color: white;
+            }
+            .logo:hover{
+              color:#eceaff;
             }
             .hero{
               
@@ -73,6 +77,7 @@
                 display: inline-block;
                 list-style: none;
                 margin: 10px 20px;
+                
             }
             nav ul li a{
                 color: #fff;
@@ -89,20 +94,24 @@
                 max-height: 0px;
                 overflow: hidden;
                 transition: max-height 0.5s;
+                
             }
             .sub-menu-wrap.open-menu{
                 max-height: 400px;
+                
 
             }
             .sub-menu{
                 background: #fff;
                 padding: 5px;
                 margin: 10px;
+                border: 2px solid #000;
                 
             }
             .user-info{
                 display: flex;
                 align-items: center;
+                
             }
             .user-info h3{
                 font-weight: 500;
@@ -126,6 +135,7 @@
                 text-decoration: none;
                 color: #525252;
                 margin: 12px 0;
+                
             }
             .sub-menu-link p{
                 width: 100%;
@@ -137,12 +147,13 @@
                 padding: 8px;
                 margin-right: 15px;
             }
-            .sub-menu-link span{
-                font-size: 22px;
+            .sub-menu-link {
+                
                 transition: transform 0.5s;
             }
-            .sub-menu-link:hover span{
-                transform: translateX(5px);
+            .sub-menu-link:hover {
+                transform: translateX(15px);
+                color:black;
             }
             .sub-menu-link:hover p{
                 font-weight: 600;
@@ -168,15 +179,29 @@
             
             letter-spacing: 3px;
             animation: fadeIn 2s ease-in-out forwards infinite alternate;
-            animation: float 4s infinite ease-in-out alternate;
+            animation: animate 4s infinite ease-in-out alternate;
+          
         }
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0);
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px) rotateY(90deg);
+                filter: blur(10px);
             }
-            50% {
-                transform: translateY(-10px);
+            25% {
+                opacity: 1;
+                transform: translateY(0) rotateY(0deg);
+                filter: blur(0px);
+            }
+            75% {
+                opacity: 1;
+                transform: translateY(0) rotateY(0deg);
+                filter: blur(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100px) rotateY(-90deg);
+                filter: blur(10px);
             }
         }
      
@@ -229,6 +254,7 @@
 }
 
 .resume-button:hover {
+  color: #000;
   background-color: #31efa0;
   box-shadow: 0 0 20px black; /* Add box shadow on hover */
 }
@@ -252,6 +278,139 @@
   color: #0a0a0a;
   margin: 0;
 }
+.wrap {
+    width: 1170px;
+    margin: 5% auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-photo {
+    flex: 1;
+    margin-right: 10px;
+    opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(-10px); /* Move photo from the top */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .profile-photo img {
+    max-width: 80%;
+    height: auto;
+    border: 5px solid #000;
+  }
+  .profile-photo img:hover {
+    filter: blur(4px); /* Apply a blur effect on hover */
+    background-color: rgba(0, 0, 0, 0.3); /* Increase brightness on hover */
+  }
+
+  .about-content {
+    flex: 2;
+  }
+
+  .about-content h2 {
+    text-transform: uppercase;
+    font-family: poppins;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: #0a0a0a;
+    margin: 0;
+  }
+  .Acontainer {
+            position: relative;
+            width: 600px;
+            height: 500px;
+            border: 4px solid #000;
+            overflow: hidden;
+            right: 0; /* Move the Acontainer to the right */
+            align-content: end;
+        }
+
+           /* CSS for the code Acontainer */
+           .code-Acontainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: poppins;
+            font-size: 15px;
+            padding: 10px;
+            line-height: 1.2; /* Adjust line height as needed */
+            letter-spacing: 0.1em;
+            background-color: #f7f7f7;
+        }
+
+        /* CSS for the output Acontainer */
+        .output-Acontainer {
+            position: absolute;
+            top: 0;
+            left: 100%; /* Initially hidden to the right */
+            width: 100%;
+            height: 100%;
+            font-family: monospace;
+            font-size: 18px;
+            padding: 10px;
+            background-color: black;
+            color: lime;
+            line-height: 2.3; /* Adjust line height as needed */
+            letter-spacing: 0.1em;
+            animation: slideIn 18s forwards; /* Slide in from the left */
+            animation-delay: 3s;
+            animation: slideIn 14s infinite;
+        }
+        
+
+        @keyframes slideIn {
+            from {
+                left: 170%; /* Start from the right */
+            }
+            to {
+                left: 0; /* Slide to the left */
+            }
+        }
+
+
+
+  /* Add animation for the content */
+  .animate-left {
+    animation: slideFromLeft 1s ease forwards;
+  }
+
+  /* Add animation for the photo with a delay */
+  .animate-photo {
+    animation: fadeInPhoto 1s ease forwards;
+    animation-delay: 0.5s; /* Delay the animation by 0.5 seconds */
+  }
+  .wrap {
+    /* ... your existing styles ... */
+    background-image: url('background-image.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  @keyframes slideFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInPhoto {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 .single-service {
 position: relative;
 width: 31%;
@@ -264,6 +423,7 @@ overflow: hidden;
 float: left;
 margin: 0 10px;
 text-align: center;
+border: 5px solid #000; 
 }
 .line {
 width: 150px;
@@ -295,7 +455,7 @@ padding: 15px;
   color: #fff;
 }
 .single-service:hover{
-  box-shadow: 0 30px 35px rgba(0,0,0,0.7);
+  box-shadow: 0 50px 50px rgba(0,0,0,0.7);
 }
 .single-service span {
 position: absolute;
@@ -382,24 +542,26 @@ transform: skewX(10deg);
         }
 
         #user-input {
-            flex: 1;
+            flex: 0.9;
             height: 40px; 
             border: 2px solid #333;
             border-radius: 20px; 
             padding: 10px;
             font-size: 16px;
-            margin-right: 10px; 
+            margin-right: 30px; 
+            margin-top: 25px;
         }
 
         #send-button {
+            flex: 0.1;
             height: 40px; 
-            background-color: #333;
-            color: #fff;
-            border: none;
+            border: 2px solid #333;
             border-radius: 20px; 
-            padding: 10px 20px;
+            
+            font-size: 18px;
+            margin-right: 10px;
             cursor: pointer;
-            font-size: 16px; 
+            margin-top: 10px;
         }
        
 
@@ -570,15 +732,18 @@ font-size: 30px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 1600px;
+            max-width: 1500px;
+            
         }
 
         .certification-card {
             width: 200px;
-            height: 180px;
+            height: 170px;
             perspective: 1000px;
             margin: 30px;
             cursor: pointer;
+            
+            
         }
 
         .certification-card-inner {
@@ -588,16 +753,19 @@ font-size: 30px;
             text-align: center;
             transition: transform 0.5s;
             transform-style: preserve-3d;
+            
+            border-radius: 2px;
         }
 
         .certification-card:hover .certification-card-inner {
             transform: rotateY(180deg);
+            
         }
 
         .certification-card-front,
         .certification-card-back {
             position: absolute;
-            width: 100%;
+            width: 110%;
             height: 100%;
             backface-visibility: hidden;
         }
@@ -607,6 +775,7 @@ font-size: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
+            border: 3px solid #000; 
         }
 
         .certification-card-back {
@@ -617,6 +786,7 @@ font-size: 30px;
             align-items: center;
             flex-direction: column;
             padding: 20px;
+            border: 2px solid #000; 
         }
 
         .certification-image {
@@ -654,7 +824,7 @@ font-size: 30px;
     width: 1000px; 
     height: 600px; 
     margin: auto;
-    border: 10px solid #ccc;
+    border: 8px solid #000;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -664,6 +834,7 @@ font-size: 30px;
     width: 100%;
     height: 80%;
     margin: 0 auto; 
+    
   }
   #animation-container {
     position: relative;
@@ -674,8 +845,9 @@ font-size: 30px;
     background-color: white;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(20, 19, 19, 0.912);
     animation-name: air;
+    
     
     
   }
@@ -851,7 +1023,7 @@ font-size: 30px;
         <div class="hero" onscroll="checkScroll()">
             <nav>
                 <div class="logo">
-                    <h2 onclick="scrollToSection('section-home')"><span style="color: #FCA311">My</span>Portfolio</h2>
+                    <h2 onclick="scrollToSection('section-home')"><span style="color: #FCA311">Vaishnavi</span>Lugade.</h2>
                 </div>
                 <ul>
                   
@@ -911,12 +1083,26 @@ font-size: 30px;
           about</h2>
           <div class="line">
           </div>
-          
-          <div class="about">
-             <p><strong>Hello,</strong><br>
-                <strong>I am a <span class="colorful-text">2024</span> graduate of Bachelor of Technology in <span class="colorful-text" >Computer Science Engineering</span><br> from Sinhgad Institutes.</strong><br>
-                </p>
-          </div><br><br>
+          <div class="wrap" id="section-about">
+            <div class="about-content">
+                
+          <div class="profile-photo">
+            <img src="vaishnavi.jpeg" alt="Your Photo" class="animate-photo">
+          </div>
+        
+          </div>
+          <div class="profile-photo">
+            <img src="vaishnavi.jpeg" alt="Your Photo" class="animate-photo">
+          </div>
+          <div class="Acontainer">
+            <div class="code-Acontainer" id="code-Acontainer">
+                <pre id="code"></pre>
+            </div>
+            <div class="output-Acontainer" id="output-Acontainer">
+                <!-- Initial text or prompt can go here -->
+            </div>
+        </div>
+        </div>
 
         
 
@@ -976,7 +1162,6 @@ font-size: 30px;
           </div>
       </div>
     </div>
-    <h1>................................................................................................................................................</h1><br>
 
     <div class="certification-card">
         <div class="certification-card-inner">
@@ -1028,9 +1213,7 @@ font-size: 30px;
 <p><strong>Worked as Social Worker with Speak Up World Foundation<br>Date:7 Feb 2022 to 7 march 2022</strong></p>                </div>
             </div>
         </div>
-    </div>
-    <h1>................................................................................................................................................</h1><br>
-
+    </div><br>
     <div class="certification-card">
         <div class="certification-card-inner">
             <div class="certification-card-front">
@@ -1138,7 +1321,7 @@ font-size: 30px;
             The temperature converter website is a user-friendly tool that allows users to convert temperatures between Fahrenheit, Celsius, and Kelvin units.user will input a temperature in either fahrenheit/celsius/kelvin and then click on submit button. The converted temperature will be displayed in the output.</p>          </div>
           <div class="single-service">
                 <div class="social">
-          <i class="fa fa-diamond"></i></div>
+          <i class="fa fa-cogs"></i></div>
           <span></span>
                  <h3>
           Basic banking application</h3>
@@ -1165,7 +1348,7 @@ font-size: 30px;
             The Breast Cancer Detection System is an application developed to predict whether an input image represents a breast with cancer or not. It utilizes a deep learning model trained on a dataset of breast images to provide accurate predictions.</p>          </div>
           <div class="single-service">
                 <div class="social">
-          <i class="fa fa-diamond"></i></div>
+          <i class="fa fa-cogs"></i></div>
           <span></span>
                  <h3>
                     Titanic survival prediction using ML</h3>
@@ -1177,7 +1360,7 @@ font-size: 30px;
          
       <div class="single-service">
                 <div class="social">
-          <i class="fa fa-codepen"></i></div>
+          <i class="fa fa-cogs"></i></div>
           <span></span>
                  <h3>
           TIC-TAC-TOE Game</h3>
@@ -1280,7 +1463,7 @@ font-size: 30px;
           </div>
           <div class="chatbot-container">
     
-            <div class="chatbot-header">Ask Questions Here!</div>
+            <div class="chatbot-header">Ask Your Query Here!</div>
             <div class="chatbot-messages" id="chat-messages">
                 <!-- Chatbot messages will be displayed here -->
             </div>
@@ -1294,16 +1477,123 @@ font-size: 30px;
 
 
 <footer>
-    <p>&copy; 2023 designed by Vaishnavi Lugade</p>
+    <p>&copy; 2023 All rights reserved by Vaishnavi Lugade</p>
 </footer>
          
         <script>
+          document.addEventListener("DOMContentLoaded", function () {
+      const wrap = document.querySelector(".wrap");
+      const profilePhoto = document.querySelector(".profile-photo");
+      const content = document.querySelector(".about-content");
+      const about = document.querySelector(".about");
+  
+      function fadeIn(element, translateValue) {
+        element.style.opacity = 1;
+        element.style.transform = `translateY(${translateValue}px)`;
+      }
+  
+      function animateElements() {
+        profilePhoto.classList.add("animate-photo"); // Animate photo with a delay
+        content.classList.add("animate-left"); // Animate content from the left side
+      }
+  
+      function checkVisibility() {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+  
+        if (scrollPosition + windowHeight > wrap.offsetTop) {
+          animateElements();
+          window.removeEventListener("scroll", checkVisibility);
+        }
+      }
+  
+      window.addEventListener("scroll", checkVisibility);
+      checkVisibility();
+    });
+
+     // JavaScript for typing Java code and displaying output
+     const codeElement = document.getElementById("code");
+    const codeAcontainer = document.getElementById("code-Acontainer");
+    const outputAcontainer = document.getElementById("output-Acontainer");
+
+    // Java code to execute
+    const javaCode = `
+
+
+    package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	introduction := make(chan string)
+
+	go func() {
+		introduction <- "Hello, I'm Vaishnavi."
+		close(introduction)
+	}()
+
+	fmt.Println("Please introduce yourself:")
+	for message := range introduction {
+		fmt.Println(message)
+	}
+}
+
+    `;
+
+    let charIndex = 0;
+
+    function typeCode() {
+        if (charIndex < javaCode.length) {
+            codeElement.textContent += javaCode.charAt(charIndex);
+            charIndex++;
+            codeAcontainer.scrollTop = codeAcontainer.scrollHeight; // Scroll to the bottom
+            setTimeout(typeCode, 10); // Typing speed (adjust as needed)
+        } else {
+            // When the code typing is complete, reveal the output Acontainer
+            outputAcontainer.style.left = "0";
+            displayOutput(); // Display the output after the code typing is complete
+        }
+    }
+
+function displayOutput() {
+    // Simulate output text (you can replace this with actual output)
+    const outputText = [
+"(c) Microsoft Corporation. All rights reserved.",
+"C:\Users> go run Main.go",
+        "Hello👋,",
+        "🌟I'm Vaishnavi Lugade,",
+        "🌱currently pursuing : ",
+                "➜ COMPUTER SCIENCE ENGINEERING.",
+                 "➜ ARTIFICIAL INTELLIGENCE & MACHINE LEARNING.",
+        "🚀a 2024 graduate student from SKNSCOE.",
+        "🖥️ Always intrested in Coding.",
+        "💡enjoy learning and exploring new technologies."
+    ];
+
+    // Create separate <p> elements for each statement
+    const outputHtml = outputText.map(text => `<p>${text}</p>`).join("");
+
+    // Set the innerHTML of the outputAcontainer
+    outputAcontainer.innerHTML = `<div class="centered">${outputHtml}</div>`;
+    
+}
+
+
+// Start typing the Java code when the page loads
+setTimeout(typeCode, 0);
             let submenu=document.getElementById("submenu");
             function vaishnavi(){
                 submenu.classList.toggle("open-menu");
             }
             const colors = ['#FF0000', '#FF7F00', '#00FF00', '#9400D3'];
-  
+            const storyMessages = [
+    "Welcome to Vaishnavi's portfolio!",
+    "she  is a 2024 graduate of Bachelor of Technology in Computer Science Engineering from Sinhgad Institute.",
+    "She excels in web development, coding, and problem-solving.",
+    "Click the button below to download her resume!"
+];
   let colorIndexName = colors.length - 1;
   
   function changeColor() {
@@ -1435,12 +1725,7 @@ font-size: 30px;
   repeatAnimation();
   const contentContainer = document.querySelector('.content');
 
-const storyMessages = [
-    "Welcome to Vaishnavi's portfolio!",
-    "she  is a 2024 graduate of Bachelor of Technology in Computer Science Engineering from Sinhgad Institute.",
-    "She excels in web development, coding, and problem-solving.",
-    "Click the button below to download her resume!"
-];
+
 
 let messageIndex = 0;
 let speechInProgress = false;
