@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
+
         <title>Vaishnavi Lugade's Portfolio</title>
         <style>
             *{
@@ -178,15 +179,29 @@
             
             letter-spacing: 3px;
             animation: fadeIn 2s ease-in-out forwards infinite alternate;
-            animation: float 4s infinite ease-in-out alternate;
+            animation: animate 4s infinite ease-in-out alternate;
+          
         }
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0);
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px) rotateY(90deg);
+                filter: blur(10px);
             }
-            50% {
-                transform: translateY(-10px);
+            25% {
+                opacity: 1;
+                transform: translateY(0) rotateY(0deg);
+                filter: blur(0px);
+            }
+            75% {
+                opacity: 1;
+                transform: translateY(0) rotateY(0deg);
+                filter: blur(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100px) rotateY(-90deg);
+                filter: blur(10px);
             }
         }
      
@@ -239,7 +254,7 @@
 }
 
 .resume-button:hover {
-  color:black;
+  color: #000;
   background-color: #31efa0;
   box-shadow: 0 0 20px black; /* Add box shadow on hover */
 }
@@ -341,7 +356,7 @@
             line-height: 2.3; /* Adjust line height as needed */
             letter-spacing: 0.1em;
             animation: slideIn 18s forwards; /* Slide in from the left */
-            animation-delay: 6s;
+            animation-delay: 3s;
             animation: slideIn 14s infinite;
         }
         
@@ -1008,7 +1023,7 @@ font-size: 30px;
         <div class="hero" onscroll="checkScroll()">
             <nav>
                 <div class="logo">
-                    <h2 onclick="scrollToSection('section-home')">Vaishnavi<span style="color: #FCA311">Lugade</span></h2>
+                    <h2 onclick="scrollToSection('section-home')"><span style="color: #FCA311">Vaishnavi</span>Lugade.</h2>
                 </div>
                 <ul>
                   
@@ -1448,7 +1463,7 @@ font-size: 30px;
           </div>
           <div class="chatbot-container">
     
-            <div class="chatbot-header">Ask Questions Here!</div>
+            <div class="chatbot-header">Ask Your Query Here!</div>
             <div class="chatbot-messages" id="chat-messages">
                 <!-- Chatbot messages will be displayed here -->
             </div>
@@ -1462,7 +1477,7 @@ font-size: 30px;
 
 
 <footer>
-    <p>&copy; 2022 All Rights Reserved by Vaishnavi Lugade</p>
+    <p>&copy; 2022 All rights reserved by Vaishnavi Lugade</p>
 </footer>
          
         <script>
@@ -1562,7 +1577,9 @@ function displayOutput() {
 
     // Set the innerHTML of the outputAcontainer
     outputAcontainer.innerHTML = `<div class="centered">${outputHtml}</div>`;
+    
 }
+
 
 // Start typing the Java code when the page loads
 setTimeout(typeCode, 0);
