@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
-
         <title>Vaishnavi Lugade's Portfolio</title>
         <style>
             *{
@@ -179,29 +178,15 @@
             
             letter-spacing: 3px;
             animation: fadeIn 2s ease-in-out forwards infinite alternate;
-            animation: animate 4s infinite ease-in-out alternate;
-          
+            animation: float 4s infinite ease-in-out alternate;
         }
-        @keyframes animate {
-            0% {
-                opacity: 0;
-                transform: translateY(-100px) rotateY(90deg);
-                filter: blur(10px);
-            }
-            25% {
-                opacity: 1;
-                transform: translateY(0) rotateY(0deg);
-                filter: blur(0px);
-            }
-            75% {
-                opacity: 1;
-                transform: translateY(0) rotateY(0deg);
-                filter: blur(0px);
-            }
+        @keyframes float {
+            0%,
             100% {
-                opacity: 0;
-                transform: translateY(100px) rotateY(-90deg);
-                filter: blur(10px);
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
             }
         }
      
@@ -254,7 +239,6 @@
 }
 
 .resume-button:hover {
-  color: #000;
   background-color: #31efa0;
   box-shadow: 0 0 20px black; /* Add box shadow on hover */
 }
@@ -356,7 +340,7 @@
             line-height: 2.3; /* Adjust line height as needed */
             letter-spacing: 0.1em;
             animation: slideIn 18s forwards; /* Slide in from the left */
-            animation-delay: 3s;
+            animation-delay: 6s;
             animation: slideIn 14s infinite;
         }
         
@@ -1023,7 +1007,7 @@ font-size: 30px;
         <div class="hero" onscroll="checkScroll()">
             <nav>
                 <div class="logo">
-                    <h2 onclick="scrollToSection('section-home')"><span style="color: #FCA311">Vaishnavi</span>Lugade.</h2>
+                    <h2 onclick="scrollToSection('section-home')">Vaishnavi<span style="color: #FCA311">Lugade</span></h2>
                 </div>
                 <ul>
                   
@@ -1118,7 +1102,7 @@ font-size: 30px;
                     <div class="certification-card-back">
                         <div class="certification-info">
                             <h3><div class="colorful-text">Web Developer</div></h3><br>
-<p><strong>Web Developer intern at code alpha in between  1 April 2022 to 30 April 2022</strong></p>                        </div>
+<p><strong>Web Developer intern at code alpha in between  1 April 2023 to 30 April 2023</strong></p>                        </div>
                     </div>
                 </div>
             </div>
@@ -1132,7 +1116,7 @@ font-size: 30px;
             <div class="certification-card-back">
                 <div class="certification-info">
                   <h3><div class="colorful-text">Agile Methedology</div></h3><br>
-<p><strong>completed Agile Methedology virtual experience program by Cognizant<br> Date: 2 Jan 2022</strong></p>                </div>
+<p><strong>completed Agile Methedology virtual experience program by Cognizant<br> Date: 2 Jan 2023</strong></p>                </div>
             </div>
         </div>
     </div>
@@ -1145,7 +1129,7 @@ font-size: 30px;
           <div class="certification-card-back">
               <div class="certification-info">
                 <h3><div class="colorful-text">Java Developer</div></h3><br>
-<p><strong>Internship at LetsGrowMore in java development<br> Date:1 Feb 2022 to 1 march 2022</strong></p>              </div>
+<p><strong>Internship at LetsGrowMore in java development<br> Date:1 Feb 2023 to 1 march 2023</strong></p>              </div>
           </div>
       </div>
     </div>
@@ -1158,7 +1142,7 @@ font-size: 30px;
           <div class="certification-card-back">
               <div class="certification-info">
                 <h3><div class="colorful-text">App Developer</div></h3><br>
-<p><strong>Internship at The Sparks Foundation as App Developer <br> Date: 1 Dec 2022 to 1 jan 2022</strong>       </div>
+<p><strong>Internship at The Sparks Foundation as App Developer <br> Date: 1 Dec 2022 to 1 jan 2023</strong>       </div>
           </div>
       </div>
     </div>
@@ -1197,7 +1181,7 @@ font-size: 30px;
             <div class="certification-card-back">
                 <div class="certification-info">
                   <h3><div class="colorful-text">App Developer</div></h3><br>
-<p><strong>Internship at DSES pvt ltd Pune as a App Developer <br>Date:6 march 2022 to 5 may 2022</strong></p>               </div>
+<p><strong>Internship at DSES pvt ltd Pune as a App Developer <br>Date:6 march 2023 to 5 may 2023</strong></p>               </div>
             </div>
         </div>
     </div>
@@ -1222,7 +1206,7 @@ font-size: 30px;
             <div class="certification-card-back">
                 <div class="certification-info">
                   <h3><div class="colorful-text">Learn Python</div></h3><br>
-<p><strong>certificate of completion Python by Codechef<br>Date:30 may 2022</strong></p>                </div>
+<p><strong>certificate of completion Python by Codechef<br>Date:30 may 2023</strong></p>                </div>
             </div>
         </div>
     </div>
@@ -1261,7 +1245,7 @@ font-size: 30px;
             <div class="certification-card-back">
                 <div class="certification-info">
                   <h3><div class="colorful-text">Go(Basic)</div></h3><br>
-<p><strong>HackerRank skill assessment certificate in Go(Basic)<br>Date:6 March 2022 </strong> </p>                </div>
+<p><strong>HackerRank skill assessment certificate in Go(Basic)<br>Date:6 March 2023 </strong> </p>                </div>
             </div>
         </div>
     </div>
@@ -1463,7 +1447,7 @@ font-size: 30px;
           </div>
           <div class="chatbot-container">
     
-            <div class="chatbot-header">Ask Your Query Here!</div>
+            <div class="chatbot-header">Ask Questions Here!</div>
             <div class="chatbot-messages" id="chat-messages">
                 <!-- Chatbot messages will be displayed here -->
             </div>
@@ -1477,7 +1461,7 @@ font-size: 30px;
 
 
 <footer>
-    <p>&copy; 2022 All rights reserved by Vaishnavi Lugade</p>
+    <p>&copy; 2022 designed by Vaishnavi Lugade</p>
 </footer>
          
         <script>
@@ -1577,9 +1561,7 @@ function displayOutput() {
 
     // Set the innerHTML of the outputAcontainer
     outputAcontainer.innerHTML = `<div class="centered">${outputHtml}</div>`;
-    
 }
-
 
 // Start typing the Java code when the page loads
 setTimeout(typeCode, 0);
