@@ -470,6 +470,34 @@ transform: skewX(10deg);
 .single-service:hover span{
   left: 110%;
 }
+section {
+            max-width: 1100px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: 3px solid black;
+            text-align: center;
+            border-radius: 2rem;
+            
+            
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        .badge {
+            width: 230px; /* Adjust the width */
+            height: 230px; /* Adjust the height */
+            border-radius: 50%;
+            margin: 0 10px;
+            
+        }
 
 .colorful-text {
     
@@ -1036,6 +1064,7 @@ font-size: 30px;
                     <li><a onclick="scrollToSection('section-about')">ABOUT</a></li>
                     <li><a onclick="scrollToSection('section-projects')" >PROJECTS</a></li>
                     <li><a onclick="scrollToSection('section-skills')">SKILLS</a></li>
+                    <li><a onclick="scrollToSection('section-badge')">BADGES</a></li>
                     <li><a onclick="scrollToSection('section-contact')">CONTACT</a></li>
                 </ul>
                 <img src="https://tse4.mm.bing.net/th?id=OIP.OmJcGriFE8bKg9-DtdlfbwHaHa&pid=Api&P=0" class="user-pic" onclick="vaishnavi()">
@@ -1397,6 +1426,25 @@ font-size: 30px;
           </div>
           </div>
           <h1>................................................................................................................................................</h1><br>
+          <div class="wrapper" id="section-badge">
+            <h2>
+           Badges</h2>
+          <div class="line">
+          </div>
+          <section>
+           
+            
+            <div class="badge-container">
+                <!-- Replace the URLs below with the URLs of your badge images -->
+                <img class="badge" src="https://tse2.mm.bing.net/th?id=OIF.HbQk%2bdtihMrFQFSVC%2fXZoA&pid=Api&P=0&h=180" alt="LeetCode Badge 1">
+                <img class="badge" src="https://leetcode.com/static/images/badges/dcc-2023-11.png" alt="LeetCode Badge 2">
+                <img class="badge" src="https://leetcode.com/static/images/badges/dcc-2023-12.png" alt="LeetCode Badge 3">
+                <img class="badge" src="https://tse4.mm.bing.net/th?id=OIF.HBFd5ekJq%2b6Yl08Amh8Vhw&pid=Api&P=0&h=180" alt="LeetCode Badge 4">
+                
+                <!-- Add more badge images as needed -->
+            </div>
+        </section>
+        </div>
           <div class="wrapper" id="section-skills">
             <h2>
           Tools</h2>
