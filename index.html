@@ -28,6 +28,33 @@
       color: #333333;
       font-family: 'Helvetica Neue', sans-serif;
     }
+
+    .wave {
+    position: absolute;
+    opacity: .2;
+    width: 1600px;
+    height: 1300px;
+    margin-left: -150px;
+    margin-top: -250px;
+    border-radius: 43%;
+  }
+  
+  @keyframes rotate {
+    from {transform: rotate(0deg);}
+    from {transform: rotate(360deg);}
+  }
+  
+  .wave.-one {
+    animation: rotate 10000ms infinite linear;
+    opacity: 5%;
+    background:#003366 ;
+  }
+  
+  .wave.-two {
+    animation: rotate 6000ms infinite linear;
+    opacity: 10%;
+    background:#003366;
+  }
             
     .logo{
                 width: 110px;
@@ -172,6 +199,7 @@
       align-items: center;
       justify-content: center;
     }
+
   
 
     /* Animation for name */
@@ -205,7 +233,6 @@
             }
         }
      
-    }
 
     @keyframes fadeIn {
       0% {
@@ -238,6 +265,7 @@
   margin-top: 80px;
   background-color: #0c1210;
   color: #fff;
+  z-index: 1000;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -1041,13 +1069,8 @@ font-size: 30px;
     }
     
             
-   
 
   }
-
-  
-
-
 
 
     
@@ -1056,6 +1079,7 @@ font-size: 30px;
     </head>
     <body onload="redirectToEdge()">
         <div class="hero" onscroll="checkScroll()">
+          
             <nav>
                 <div class="logo">
                     <h2 href="vaishnavilugade.github.io"><span style="color: #FCA311">Vaishnavi</span>Lugade.</h2>
@@ -1108,13 +1132,20 @@ font-size: 30px;
                 </div>
             </div>
             </nav>
-        <div class="header-content" id="section-home">
-            <h1></h1>
-            <h1 class="name">I'm Vaishnavi Lugade.</h1>
-            <h4 class="titles">Student | App Developer | Web Developer</h4>
-            <a class="resume-button" href="https://drive.google.com/file/d/1xFNf4YU4eNsOkm1PH6PKwgpPKeyx5JvH/view?usp=share_link" target="_blank">Download Resume</a>
-          </div><br><br>
-        
+            
+            <div class="header-content" id="section-home">
+              <h1></h1>
+              <h1 class="name">I'm Vaishnavi Lugade.</h1>
+              <h4 class="titles">Student | App Developer | Web Developer</h4>
+              <a class="resume-button" href="https://drive.google.com/file/d/1xFNf4YU4eNsOkm1PH6PKwgpPKeyx5JvH/view?usp=share_link" target="_blank">Download Resume</a>
+            </div>
+            <br><br>
+          
+            <div class='box'>
+              <div class='wave -one'></div>
+              <div class='wave -two'></div>
+            </div>
+          
           <div class="wrapper" id="section-about">
             <h2>
           about</h2>
@@ -1335,6 +1366,7 @@ font-size: 30px;
         </div>
 
 </div>
+
           <div class="wrapper" id="section-projects">
             <h2>
           PROJECTS</h2>
@@ -1433,6 +1465,7 @@ font-size: 30px;
             <canvas id="skillsChart"></canvas>
           </div>
           </div>
+          
           <h1>................................................................................................................................................</h1><br>
           <div class="wrapper" id="section-badge">
             <h2>
