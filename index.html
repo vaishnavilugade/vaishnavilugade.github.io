@@ -31,9 +31,9 @@
 
     .wave {
     position: absolute;
-    opacity: .2;
-    width: 1600px;
-    height: 1300px;
+    opacity: .29;
+    width: 1300px;
+    height: 100px;
     margin-left: -150px;
     margin-top: -250px;
     border-radius: 43%;
@@ -47,13 +47,13 @@
   .wave.-one {
     animation: rotate 10000ms infinite linear;
     opacity: 5%;
-    background:#003366 ;
+    background:#de0b4e ;
   }
   
   .wave.-two {
     animation: rotate 6000ms infinite linear;
     opacity: 10%;
-    background:#003366;
+    background:#de0b4e;
   }
             
     .logo{
@@ -125,9 +125,11 @@
             }
             .sub-menu-wrap.open-menu{
                 max-height: 400px;
+                display: block;
                 
 
             }
+
             .sub-menu{
                 background: #fff;
                 padding: 5px;
@@ -135,6 +137,7 @@
                 border: 2px solid #000;
                 
             }
+            
             .user-info{
                 display: flex;
                 align-items: center;
@@ -265,7 +268,7 @@
   margin-top: 80px;
   background-color: #0c1210;
   color: #fff;
-  z-index: 1000;
+  z-index: 100;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -452,6 +455,7 @@ float: left;
 margin: 0 10px;
 text-align: center;
 border: 5px solid #000; 
+z-index: 100;
 }
 .line {
 width: 150px;
@@ -805,6 +809,7 @@ font-size: 30px;
             perspective: 1000px;
             margin: 30px;
             cursor: pointer;
+            z-index: 100;
             
             
         }
@@ -892,6 +897,7 @@ font-size: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; 
+    
   }
   #skillsChart {
     width: 100%;
@@ -910,6 +916,7 @@ font-size: 30px;
     justify-content: center;
     box-shadow: 0px 0px 10px rgba(20, 19, 19, 0.912);
     animation-name: air;
+    z-index: 100;
     
     
     
@@ -1335,6 +1342,10 @@ font-size: 30px;
     </div>
             
         </div>
+        <div class='box'>
+          <div class='wave -one'></div>
+          <div class='wave -two'></div>
+        </div>
 <br><h2><strong><span style="align-items: center;">Education</span></strong></h2>
 <div class="line">
 </div>
@@ -1455,7 +1466,10 @@ font-size: 30px;
         </div>
 
         <h1>................................................................................................................................................</h1><br>
-        
+        <div class='box'>
+          <div class='wave -one'></div>
+          <div class='wave -two'></div>
+        </div>
         <div class="wrapper" id="section-skills">
             <h2>
           skills</h2>
@@ -1506,6 +1520,7 @@ font-size: 30px;
            </div>
        </section>
         </div>
+        
           <div class="wrapper" id="section-skills">
             <h2>
           Tools</h2>
@@ -1696,6 +1711,8 @@ setTimeout(typeCode, 0);
             function vaishnavi(){
                 submenu.classList.toggle("open-menu");
             }
+            
+            
             const colors = ['#FF0000', '#FF7F00', '#00FF00', '#9400D3'];
             const storyMessages = [
     "Welcome to Vaishnavi's portfolio!",
@@ -1927,7 +1944,7 @@ function toggleTheme(theme) {
                 } else if (lowerCaseMessage.includes("language ")) {
                     botResponse("I have expertise in programming languages like java,python,golang and have completed 🛠️ projects using them.");
                 } else if (lowerCaseMessage.includes("achievements")) {
-                    botResponse("I'm the most actvie github user in india with 🥇 rank 13.");
+                    botResponse("You can visit my leetcode profile[leetcode.com/vaishnavilugade] ,Hackerrank profile[https://www.hackerrank.com/profile/vaishnavilugade],Hackerearth profile[https://www.hackerearth.com/@vaishnavilugade] ,I'm the most actvie github user in india with 🥇 rank 05 .");
                 } else if (lowerCaseMessage.includes("internship")) {
                     botResponse("Yes, I've interned 🌟 as web developer,app developer,java developer,artificial intelligence intern with differnt companies.");
                 } else if (lowerCaseMessage.includes("competitions")) {
