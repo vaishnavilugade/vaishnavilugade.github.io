@@ -6,9 +6,7 @@
         </head>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="icon" type="image/x-icon" href="https://tse1.mm.bing.net/th?id=OIP.x-y3tDw18T0jInh2JH3UTgHaE7&pid=Api&P=0&h=180">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
 
 
         <title>Vaishnavi Lugade's Portfolio</title>
@@ -265,7 +263,7 @@
 
     /* Download resume button */
     .resume-button {
-  margin-top: 80px;
+  margin-top: -590px;
   background-color: #0c1210;
   color: #fff;
   z-index: 100;
@@ -348,58 +346,56 @@
     margin: 0;
   }
   .Acontainer {
-            position: relative;
-            width: 600px;
-            height: 500px;
-            border: 4px solid #000;
-            overflow: hidden;
-            right: 0; /* Move the Acontainer to the right */
-            align-content: end;
-        }
+        position: relative;
+        width: 700px;
+        height: 600px;
+        border: 4px solid #000;
+        overflow: hidden;
+    }
 
-           /* CSS for the code Acontainer */
-           .code-Acontainer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            font-family: poppins;
-            font-size: 15px;
-            padding: 10px;
-            line-height: 1.2; /* Adjust line height as needed */
-            letter-spacing: 0.1em;
-            background-color: #f7f7f7;
-        }
+    /* CSS for the code Acontainer */
+    .code-Acontainer {
+        position: absolute;
+        top: 0;
+        left: -40px;
+        width: 120%;
+        height: 100%;
+        font-family: poppins;
+        font-size: 15px;
+        padding: 10px;
+        line-height: 0.8; /* Adjust line height as needed */
+        letter-spacing: 0.1em;
+        background-color: rgb(244, 244, 239);
+        overflow: hidden; /* Add overflow for scrolling */
+        text-align: left;
+    }
 
-        /* CSS for the output Acontainer */
-        .output-Acontainer {
-            position: absolute;
-            top: 0;
-            left: 100%; /* Initially hidden to the right */
-            width: 100%;
-            height: 100%;
-            font-family: monospace;
-            font-size: 18px;
-            padding: 10px;
-            background-color: black;
-            color: lime;
-            line-height: 2.3; /* Adjust line height as needed */
-            letter-spacing: 0.1em;
-            animation: slideIn 18s forwards; /* Slide in from the left */
-            animation-delay: 3s;
-            animation: slideIn 14s infinite;
-        }
-        
+    /* CSS for the output Acontainer */
+    .output-Acontainer {
+        position: absolute;
+        top: 0;
+        left: 100%; /* Initially hidden to the right */
+        width: 100%;
+        height: 100%;
+        font-family: poppins;
+        font-size: 22px;
+        padding: 10px;
+        background-color: black;
+        color: lime;
+        line-height: 2.3; /* Adjust line height as needed */
+        letter-spacing: 0.1em;
+        animation: slideIn 20s forwards; /* Slide in from the left */
+        animation-delay: 4s;
+    }
 
-        @keyframes slideIn {
-            from {
-                left: 170%; /* Start from the right */
-            }
-            to {
-                left: 0; /* Slide to the left */
-            }
+    @keyframes slideIn {
+        from {
+            left: 170%; /* Start from the right */
         }
+        to {
+            left: 0; /* Slide to the left */
+        }
+    }
 
 
 
@@ -516,27 +512,90 @@ section {
             
         }
 
-        .badge-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            perspective: 1000px;
-        }
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
 
-        .badge {
-            width: 230px; /* Adjust the width */
-            height: 230px; /* Adjust the height */
-            border-radius: 50%;
-            margin: 0 10px;
-            
-        }
-        .badge1 {
-            width: 170px; /* Adjust the width */
-            height: 190px; /* Adjust the height */
-            
-            margin: 0 10px;
-            
-        }
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -70px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: -70px;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 8px 120px;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  bottom: -85px;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
 
 .colorful-text {
     
@@ -795,77 +854,62 @@ font-size: 30px;
       background-color: #31efa0;
     }
   
-        .certifications-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1500px;
-            
-        }
+       /* certification-container */
+.imageshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
 
-        .certification-card {
-            width: 200px;
-            height: 170px;
-            perspective: 1000px;
-            margin: 30px;
-            cursor: pointer;
-            z-index: 100;
-            
-            
-        }
 
-        .certification-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.5s;
-            transform-style: preserve-3d;
-            
-            border-radius: 2px;
-        }
 
-        .certification-card:hover .certification-card-inner {
-            transform: rotateY(180deg);
-            
-        }
+/* Number describe (1/3 etc) */
+.numberdescribe {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
-        .certification-card-front,
-        .certification-card-back {
-            position: absolute;
-            width: 110%;
-            height: 100%;
-            backface-visibility: hidden;
-        }
+/* The bulletss/bullets/indicators */
+.bullets {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
-        .certification-card-front {
-            background-color: #e5e5e5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 3px solid #000; 
-        }
+.active {
+  background-color: #717171;
+}
 
-        .certification-card-back {
-            background-color: #ffffff;
-            transform: rotateY(180deg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-            border: 2px solid #000; 
-        }
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
-        .certification-image {
-            max-width: 100%;
-            max-height: 80%;
-        }
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
-        .certification-info {
-            margin-top: 20px;
-            text-align: center;
-        }
+/* On smaller screens, decrease describe size */
+@media only screen and (max-width: 300px) {
+  .describe {font-size: 11px}
+} 
+
+        
+
+        
+
+        
+
+       
         .about{
             font-size: 2.5rem;
             background-color: #eceaff;
@@ -1098,7 +1142,7 @@ font-size: 30px;
                         <span class="logo"><i class="icon moon fas fa-moon" style="display:none;"></i></span>-->
                    
                 
-                    <li><a class="active" onclick="scrollToSection('section-home')">HOME 🏡</a></li>
+                    <li><a  onclick="scrollToSection('section-home')">HOME 🏡</a></li>
                     <li><a PROFILE onclick="scrollToSection('section-about')">PROFILE 🌟</a></li>
                     <li><a onclick="scrollToSection('section-projects')" >CREATIONS 🚀</a></li>
                     <li><a onclick="scrollToSection('section-skills')">ABILITIES 🛠️
@@ -1113,53 +1157,51 @@ font-size: 30px;
                     
                     <a href="https://github.com/vaishnavilugade" class="sub-menu-link">
                         <img src="http://cdn.onlinewebfonts.com/svg/download_258190.png">
-                        <h3><strong>&nbsp;&nbsp;&nbsp;Github</strong></h3>
+                        <h3><strong>&nbsp;&nbsp;&nbsp;Github</strong></h3></a>
                         
                         <a href="https://www.linkedin.com/in/vaishnavi-lugade-6351a8228/" class="sub-menu-link">
                             <img src="https://tse2.mm.bing.net/th?id=OIP.w_zDkEJ9aLiWR-g0rff8hwHaHa&pid=Api&P=0&h=180">
-                            <h3><strong>&nbsp;&nbsp;Linkedin</strong></h3>
+                            <h3><strong>&nbsp;&nbsp;Linkedin</strong></h3></a>
                             
                             <a href="https://www.hackerearth.com/@vaishnavilugade" class="sub-menu-link">
                                 <img src="https://images.saasworthy.com/tr:w-200,h-0/hackerearth_9253_logo_1596603366_wm6ce.png">
-                                <h3><strong>Hackerearth</strong></h3>
+                                <h3><strong>Hackerearth</strong></h3></a>
                                 
                                 <a href="https://www.hackerrank.com/vaishnavilugade?hr_r=1" class="sub-menu-link" id="logout">
                                     <img src="https://tse3.mm.bing.net/th?id=OIP.agIMyTnd_rFdVu5z2VqCagHaIL&pid=Api&P=0&h=180">
-                                    <h3><strong>HackerRank</strong></h3>
+                                    <h3><strong>HackerRank</strong></h3></a>
                                     
                                     <a href="https://www.codechef.com/users/vaishnvilugade" class="sub-menu-link" id="logout">
                                         <img src="https://soumyadipghorai.github.io/images/coding_profile/codechef.png">
-                                        <h3><strong>&nbsp;&nbsp;Codechef</strong></h3>
+                                        <h3><strong>&nbsp;&nbsp;Codechef</strong></h3></a>
                                         
                                         <a href="https://leetcode.com/vaishnavilugade/" class="sub-menu-link" id="logout">
                                             <img src="https://assets.leetcode.com/contest/LeetCode/company_logo">
-                                            <h3><strong>&nbsp;&nbsp;&nbsp;Leetcode</strong></h3>
+                                            <h3><strong>&nbsp;&nbsp;&nbsp;Leetcode</strong></h3></a>
+                                
+
+                                                <a href="https://www.codingninjas.com/studio/profile/vaishnavilugade" class="sub-menu-link" id="logout">
+                                                    <img src="https://coursereport-production.imgix.net/uploads/school/logo/1323/original/Coding_Ninjas_logo.jpeg?w=200&h=200&dpr=3&q=35">
+                                                    <h3><strong>&nbsp;&nbsp;&nbsp;Coding Ninjas</strong></h3></a>
                                             
-                    </a>
+                    
                 </div>
             </div>
             </nav>
             
-            <div class="header-content" id="section-home">
-              <h1></h1>
-              <h1 class="name">I'm Vaishnavi Lugade.</h1>
-              <h4 class="titles">Student | App Developer | Web Developer</h4>
-              <a class="resume-button" href="https://drive.google.com/file/d/1xFNf4YU4eNsOkm1PH6PKwgpPKeyx5JvH/view?usp=share_link" target="_blank">Download Resume</a>
-            </div>
-            <br><br>
+            
           
             <div class='box'>
               <div class='wave -one'></div>
               <div class='wave -two'></div>
             </div>
           
-          <div class="wrapper" id="section-about">
-            <h2>
-          about</h2>
-          <div class="line">
-          </div>
-          <div class="wrap" id="section-about">
+          
+            
+           <br><br>
+          <div class="wrap" id="section-home">
             <div class="about-content">
+                
                 
           <div class="profile-photo">
             <img src="vaishnavi.jpeg" alt="Your Photo" class="animate-photo">
@@ -1171,181 +1213,135 @@ font-size: 30px;
           </div>
           <div class="Acontainer">
             <div class="code-Acontainer" id="code-Acontainer">
-                <pre id="code"></pre>
+                <pre><code class="language-golang" id="code"></code></pre> <!-- Add the code block here -->
             </div>
             <div class="output-Acontainer" id="output-Acontainer">
                 <!-- Initial text or prompt can go here -->
             </div>
         </div>
         </div>
-
         
-
-
-          
-          <div class="certifications-container" >
-            <!-- Replace the image URLs with your actual certification images -->
-            <div class="certification-card">
-                <div class="certification-card-inner">
-                    <div class="certification-card-front">
-                        <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/codealpha.jpeg?raw=true" class="certification-image" alt="Certification 1">
-                    </div>
-                    <div class="certification-card-back">
-                        <div class="certification-info">
-                            <h3><div class="colorful-text">Web Developer</div></h3><br>
-<p><strong>Web Developer intern at code alpha in between  1 April 2023 to 30 April 2023</strong></p>                        </div>
-                    </div>
-                </div>
-            </div>
-    
-    
-      <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/Agile.png?raw=true" class="certification-image" alt="Certification 2">
-            </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">Agile Methedology</div></h3><br>
-<p><strong>completed Agile Methedology virtual experience program by Cognizant<br> Date: 2 Jan 2023</strong></p>                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="certification-card">
-      <div class="certification-card-inner">
-          <div class="certification-card-front">
-              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/letsgrowmore.jpeg?raw=true" class="certification-image" alt="Certification 2">
+        <div class="wrapper" id="section-about">
+            <h2>
+          About</h2>
+          <div class="line">
           </div>
-          <div class="certification-card-back">
-              <div class="certification-info">
-                <h3><div class="colorful-text">Java Developer</div></h3><br>
-<p><strong>Internship at LetsGrowMore in java development<br> Date:1 Feb 2023 to 1 march 2023</strong></p>              </div>
-          </div>
-      </div>
-    </div>
-    
-    <div class="certification-card">
-      <div class="certification-card-inner">
-          <div class="certification-card-front">
-              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/sparks.jpeg?raw=true" class="certification-image" alt="Certification 2">
-          </div>
-          <div class="certification-card-back">
-              <div class="certification-info">
-                <h3><div class="colorful-text">App Developer</div></h3><br>
-<p><strong>Internship at The Sparks Foundation as App Developer <br> Date: 1 Dec 2022 to 1 jan 2023</strong>       </div>
-          </div>
-      </div>
-    </div>
+        <div class="imageshow-container">
 
-    <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/coordinator.jpeg?raw=true" class="certification-image" alt="Certification 2">
+            <div class="myimages fade">
+              
+              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/codealpha.jpeg?raw=true" style="width:100%">
+              
             </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">Coordinator</div></h3><br>
-<p><strong>Coordinated in National level technical festival organised by SKNSCOE</strong></p>                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/oasis.jpeg?raw=true" class="certification-image" alt="Certification 2">
-            </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">Web Developer</div></h3><br>
-<p><strong>Internship at Oasis Infobyte as web Developer <br>Date: 1 Oct 2022 to 1 Nov 2022</strong></p>                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/DSES.png?raw=true" class="certification-image" alt="Certification 2">
-            </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">App Developer</div></h3><br>
-<p><strong>Internship at DSES pvt ltd Pune as a App Developer <br>Date:6 march 2023 to 5 may 2023</strong></p>               </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/social%20worker.jpeg?raw=true" class="certification-image" alt="Certification 2">
-            </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">Social Worker</div></h3><br>
-<p><strong>Worked as Social Worker with Speak Up World Foundation<br>Date:7 Feb 2022 to 7 march 2022</strong></p>                </div>
-            </div>
-        </div>
-    </div><br>
-    <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/python.jpeg?raw=true" class="certification-image" alt="Certification 2">
-            </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">Learn Python</div></h3><br>
-<p><strong>certificate of completion Python by Codechef<br>Date:30 may 2023</strong></p>                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/java.jpeg?raw=true" class="certification-image" alt="Certification 2">
-            </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">Learn Java</div></h3><br>
-<p><strong>Completed course on java <br>Date 13 Oct 2022</strong></p>                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/hackathon.jpeg?raw=true" class="certification-image" alt="Certification 2">
-            </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">Hackathon 2K22</div></h3><br>
-<p><strong>Participated in Hackathon organized by SKNSCOE<br>Date:11 & 12 march 2022</strong></p>                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="certification-card">
-        <div class="certification-card-inner">
-            <div class="certification-card-front">
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/go.png?raw=true" class="certification-image" alt="Certification 2">
-            </div>
-            <div class="certification-card-back">
-                <div class="certification-info">
-                  <h3><div class="colorful-text">Go(Basic)</div></h3><br>
-<p><strong>HackerRank skill assessment certificate in Go(Basic)<br>Date:6 March 2023 </strong> </p>                </div>
-            </div>
-        </div>
-    </div>
             
-        </div>
-        <div class='box'>
-          <div class='wave -one'></div>
-          <div class='wave -two'></div>
-        </div>
+            <div class="myimages fade">
+              
+              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/Agile.png?raw=true" style="width:100%">
+              
+            </div>
+            
+            <div class="myimages fade">
+              
+              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/letsgrowmore.jpeg?raw=true" style="width:100%">
+              
+            </div>
+
+            <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/sparks.jpeg?raw=true" style="width:100%">
+                
+              </div>
+              
+              <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/coordinator.jpeg?raw=true" style="width:100%">
+                <div class="describe">Caption Two</div>
+              </div>
+              
+              <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/oasis.jpeg?raw=true" style="width:100%">
+                
+              </div>
+
+              <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/DSES.png?raw=true" style="width:100%">
+                
+              </div>
+              
+              <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/social%20worker.jpeg?raw=true" style="width:100%">
+               
+              </div>
+              
+              <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/python.jpeg?raw=true" style="width:100%">
+                
+              </div>
+
+              <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/java.jpeg?raw=true" style="width:100%">
+                
+              </div>
+              
+              <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/hackathon.jpeg?raw=true" style="width:100%">
+                
+              </div>
+              
+              <div class="myimages fade">
+                
+                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/go.png?raw=true" style="width:100%">
+                
+              </div>
+
+
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="bullets"></span> 
+              <span class="bullets"></span> 
+              <span class="bullets"></span> 
+              <span class="bullets"></span> 
+              <span class="bullets"></span> 
+              <span class="bullets"></span>
+              <span class="bullets"></span> 
+              <span class="bullets"></span> 
+              <span class="bullets"></span>
+              <span class="bullets"></span> 
+              <span class="bullets"></span> 
+              <span class="bullets"></span>
+            </div>
+          
+          
+    
+    
+      
+    
+    
+    
+    
+
+    
+    
+
+   
+
+    
+
+    
+    
+
+   
+            
+        
 <br><h2><strong><span style="align-items: center;">Education</span></strong></h2>
 <div class="line">
 </div>
@@ -1463,12 +1459,42 @@ font-size: 30px;
       <p>
         The main objective of this project is to help people to find rental houses. This project is useful for people who want to rent a house according to their needs and budget.
         In that first user has to register whether he is a tenant or an owner. He can then login and view their activities and also view locations.</p>      </div>
+        <h1>................................................................................................................................................</h1><br>
+
+
+        <div class="single-service">
+            <div class="social">
+      <i class="fa fa-cogs"></i></div>
+      <span></span>
+             <h3>Python Turtle Art: Ram Mandir Ayodhya
+      </h3>
+      <p>
+        The "Python Turtle Art: Ram Mandir Ayodhya" project involves using Python's Turtle graphics to create a visual representation of Ram Mandir Ayodhya.</p>      </div>
+        <div class="single-service">
+            <div class="social">
+      <i class="fa fa-cogs"></i></div>
+      <span></span>
+             <h3>
+                Python Turtle Art:Lord Krishna</h3>
+      <p>
+        The "Python Turtle Art: Lord Krishna" project involves using Python's Turtle graphics to create a visual representation of Lord Krishna.</p>      </div>
+        <div class="single-service">
+            <div class="social">
+      <i class="fa fa-cogs"></i></div>
+      <span></span>
+             <h3>
+      Face Detecion AI</h3>
+      <p>
+        A face detection project uses algorithms to find and locate human faces in images or video. It analyzes visual data to identify facial features, like eyes and mouth, allowing it to determine where faces are in the input and calculate how many faces are detected.</p>      </div>
+
+        
         </div>
 
         <h1>................................................................................................................................................</h1><br>
+        
+        
         <div class='box'>
-          <div class='wave -one'></div>
-          <div class='wave -two'></div>
+         
         </div>
         <div class="wrapper" id="section-skills">
             <h2>
@@ -1489,36 +1515,63 @@ font-size: 30px;
           <section>
            
             
-            <div class="badge-container">
-                <!-- Replace the URLs below with the URLs of your badge images -->
-                <img class="badge" src="https://tse2.mm.bing.net/th?id=OIF.HbQk%2bdtihMrFQFSVC%2fXZoA&pid=Api&P=0&h=180" alt="LeetCode Badge 1">
-                <img class="badge" src="https://leetcode.com/static/images/badges/dcc-2023-11.png" alt="LeetCode Badge 2">
-                <img class="badge" src="https://leetcode.com/static/images/badges/dcc-2023-12.png" alt="LeetCode Badge 3">
-                <img class="badge" src="https://tse4.mm.bing.net/th?id=OIF.HBFd5ekJq%2b6Yl08Amh8Vhw&pid=Api&P=0&h=180" alt="LeetCode Badge 4">
-                
-                <!-- Add more badge images as needed -->
+            <div class="slideshow-container">
 
-            </div>
+                <div class="mySlides fade">
+                  
+                  <img src="https://assets.leetcode.com/static_assets/marketing/2023-50.gif" style="width:100%">
+                  
+                </div>
+
+                
+                
+                <div class="mySlides fade">
+                  
+                  <img src="https://assets.leetcode.com/static_assets/marketing/2023-100.gif" style="width:100%">
+                  
+                </div>
+                <div class="mySlides fade">
+                <img src="https://leetcode.com/static/images/badges/2023/gif/2023-11.gif" style="width:100%">
+                  
+                </div>
+
+                <div class="mySlides fade">
+                <img src="https://leetcode.com/static/images/badges/2023/gif/2023-12.gif" style="width:100%">
+                  
+                </div>
+                
+                
+                <div class="mySlides fade">
+                  
+                  <img src="https://leetcode.com/static/images/badges/2024/gif/2024-01.gif" style="width:100%">
+                
+                </div>
+
+                <div class="mySlides fade">
+                  
+                    <img src="https://leetcode.com/static/images/badges/2024/gif/2024-02.gif" style="width:100%">
+                  
+                  </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                  <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
         </section>
         
          <div class="line">
          </div>
-         <section>
-          
-           
-           <div class="badge-container">
-               <!-- Replace the URLs below with the URLs of your badge images -->
-               <img class="badge1" src="problem solving.png" alt="LeetCode Badge 1">
-               <img class="badge1" src="cpp.png" alt="LeetCode Badge 2">
-               <img class="badge1" src="java.png" alt="LeetCode Badge 3">
-               <img class="badge1" src="python.png" alt="LeetCode Badge 4">
-               <img class="badge1" src="sql.png" alt="LeetCode Badge 4">
-               <img class="badge1" src="c.png" alt="LeetCode Badge 4">
-               
-               <!-- Add more badge images as needed -->
-               
-           </div>
-       </section>
+         
         </div>
         
           <div class="wrapper" id="section-skills">
@@ -1603,7 +1656,8 @@ font-size: 30px;
 <footer>
     <p>&copy; 2022 All rights reserved by Vaishnavi Lugade</p>
 </footer>
-         
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script> 
         <script>
           document.addEventListener("DOMContentLoaded", function () {
       const wrap = document.querySelector(".wrap");
@@ -1635,74 +1689,76 @@ font-size: 30px;
       checkVisibility();
     });
 
-     // JavaScript for typing Java code and displaying output
-     const codeElement = document.getElementById("code");
-    const codeAcontainer = document.getElementById("code-Acontainer");
-    const outputAcontainer = document.getElementById("output-Acontainer");
+    const codeElement = document.getElementById("code");
+        const codeAcontainer = document.getElementById("code-Acontainer");
+        const outputAcontainer = document.getElementById("output-Acontainer");
 
-    // Java code to execute
-    const javaCode = `
+        // Java code to execute
+        const javaCode = `
+            package main
 
+            import (
+                "fmt"
+            )
 
-    package main
+            func main() {
+                introduction := make(chan string)
 
-import (
-	"fmt"
-)
+                go func() {
+                    introduction <- "Hello, I'm Vaishnavi."
+                    close(introduction)
+                }()
 
-func main() {
-	introduction := make(chan string)
+                fmt.Println("Please introduce yourself:")
+                for message := range introduction {
+                    fmt.Println(message)
 
-	go func() {
-		introduction <- "Hello, I'm Vaishnavi."
-		close(introduction)
-	}()
+                }
+                
+            }
+            
+        `;
 
-	fmt.Println("Please introduce yourself:")
-	for message := range introduction {
-		fmt.Println(message)
-	}
-}
+        let charIndex = 0;
 
-    `;
-
-    let charIndex = 0;
-
-    function typeCode() {
-        if (charIndex < javaCode.length) {
-            codeElement.textContent += javaCode.charAt(charIndex);
-            charIndex++;
-            codeAcontainer.scrollTop = codeAcontainer.scrollHeight; // Scroll to the bottom
-            setTimeout(typeCode, 10); // Typing speed (adjust as needed)
-        } else {
-            // When the code typing is complete, reveal the output Acontainer
-            outputAcontainer.style.left = "0";
-            displayOutput(); // Display the output after the code typing is complete
-        }
+        function typeCode() {
+    if (charIndex < javaCode.length) {
+        codeElement.textContent += javaCode.charAt(charIndex);
+        charIndex++;
+        codeAcontainer.scrollTop = codeAcontainer.scrollHeight; // Scroll to the bottom
+        codeElement.innerHTML = Prism.highlight(codeElement.textContent, Prism.languages.java); // Highlight the code
+        setTimeout(typeCode, 10); // Typing speed (adjust as needed)
+    } else {
+        // When the code typing is complete, reveal the output container
+        outputAcontainer.style.left = "0";
+        displayOutput(); // Display the output after the code typing is complete
     }
-
-function displayOutput() {
-    // Simulate output text (you can replace this with actual output)
-    const outputText = [
-"(c) Microsoft Corporation. All rights reserved.",
-"C:\Users> go run Main.go",
-        "Hello👋,",
-        "🌟I'm Vaishnavi Lugade,",
-        "🌱currently pursuing : ",
-                "➜ COMPUTER SCIENCE ENGINEERING.",
-                 "➜ ARTIFICIAL INTELLIGENCE & MACHINE LEARNING.",
-        "🚀a 2024 graduate student from SKNSCOE.",
-        "🖥️ Always intrested in Coding.",
-        "💡enjoy learning and exploring new technologies."
-    ];
-
-    // Create separate <p> elements for each statement
-    const outputHtml = outputText.map(text => `<p>${text}</p>`).join("");
-
-    // Set the innerHTML of the outputAcontainer
-    outputAcontainer.innerHTML = `<div class="centered">${outputHtml}</div>`;
-    
 }
+
+
+        function displayOutput() {
+            // Simulate output text (you can replace this with actual output)
+            const outputText = [
+                "(c) Microsoft Corporation. All rights reserved.",
+                "C:\Users> go run Main.go",
+                "Hello👋,",
+                "🌟I'm Vaishnavi Lugade,",
+                "🌱currently pursuing : ",
+                "➜ COMPUTER SCIENCE ENGINEERING.",
+                "➜ ARTIFICIAL INTELLIGENCE & MACHINE LEARNING.",
+                "🚀a 2024 graduate student from SKNSCOE.",
+                "🖥️ Always intrested in Coding.",
+                "💡enjoy learning and exploring new technologies."
+            ];
+
+            // Create separate <p> elements for each statement
+            const outputHtml = outputText.map(text => `<p>${text}</p>`).join("");
+
+            // Set the innerHTML of the outputAcontainer
+            outputAcontainer.innerHTML = `<div class="centered">${outputHtml}</div>`;
+        }
+
+        
 
 
 // Start typing the Java code when the page loads
@@ -2014,7 +2070,51 @@ function toggleTheme(theme) {
 
         botResponse("welcome to my portfolio!");    
 
+        let slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+let imageIndex = 0;
+showimages();
+
+function showimages() {
+  let i;
+  let images = document.getElementsByClassName("myimages");
+  let bulletss = document.getElementsByClassName("bullets");
+  for (i = 0; i < images.length; i++) {
+    images[i].style.display = "none";  
+  }
+  imageIndex++;
+  if (imageIndex > images.length) {imageIndex = 1}    
+  for (i = 0; i < bulletss.length; i++) {
+    bulletss[i].className = bulletss[i].className.replace(" active", "");
+  }
+  images[imageIndex-1].style.display = "block";  
+  bulletss[imageIndex-1].className += " active";
+  setTimeout(showimages, 2000); // Change image every 2 seconds
+}
 
         </script>
 
