@@ -610,13 +610,49 @@ section {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 19px 0;
+            padding: 20px 0;
             width: 100%;
         }
 
         footer p {
-            font-size: 20px;
+            font-size: 23px;
         }
+        .butterfly {
+            position: absolute;
+            margin-top: -80px; /* Add margin from the top */
+            right: 170px;
+            width: 70px;
+            height: auto;
+        }
+
+        .visitor-count {
+            display: flex;
+            justify-content: flex-end; /* Align to the right */
+            margin-top: -30px; /* Add margin from the top */
+            margin-right: 20px;
+            
+        }
+
+        .rainbow-square {
+            width: 30px; /* Set width */
+            height: 30px; /* Set height */
+            margin: 0 5px; /* Add spacing */
+            border-radius: 5px; /* Add border radius */
+            border: 2px solid aqua;
+            background-color: black; /* Set background color */
+            display: flex; /* Add flex display */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
+
+        .rainbow-square span {
+            font-size: 20px; /* Set font size */
+        }
+
+        .rainbow {
+            animation: rainbow 1.5s infinite linear alternate; /* Apply rainbow animation */
+        }
+
   .chatbot-container {
             background-color: #f5f5f5;
             border: 2px solid #333;
@@ -1654,7 +1690,16 @@ font-size: 30px;
 
 
 <footer>
-    <p>&copy; 2022 All rights reserved by Vaishnavi Lugade</p>
+  <p>&copy; 2022 All rights reserved by Vaishnavi Lugade</p>
+  <div class="visitor-count">
+      <div class="rainbow-square"><span class="rainbow" id="digit1">0</span></div> <!-- Rainbow square for digit 0 -->
+      <div class="rainbow-square"><span class="rainbow" id="digit2">0</span></div> <!-- Rainbow square for digit 0 -->
+      <div class="rainbow-square"><span class="rainbow" id="digit3">0</span></div> <!-- Rainbow square for digit 0 -->
+      <div class="rainbow-square"><span class="rainbow" id="digit4">0</span></div>
+      <div class="rainbow-square"><span class="rainbow" id="digit4">0</span></div>
+      
+  </div>
+  <img class="butterfly" src="http://bestanimations.com/Animals/Insects/Butterflys/butterfly-animated-gif-45.gif" alt="butterfly"> <!-- Butterfly GIF -->
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script> 
@@ -2115,6 +2160,29 @@ function showimages() {
   bulletss[imageIndex-1].className += " active";
   setTimeout(showimages, 2000); // Change image every 2 seconds
 }
+
+// JavaScript code to update visitor count
+let visitorCount = localStorage.getItem('visitorCount');
+
+if (visitorCount === null) {
+    visitorCount = 0;
+}
+
+// Update visitor count
+visitorCount++;
+localStorage.setItem('visitorCount', visitorCount);
+
+// Display visitor count
+let visitorCountElement = document.querySelector('.visitor-count');
+let countString = String(visitorCount).padStart(5, '0'); // Pad with leading zeros
+for (let i = 0; i < countString.length; i++) {
+    let digitSpan = document.createElement('span');
+    digitSpan.textContent = countString[i];
+    digitSpan.classList.add('rainbow');
+    visitorCountElement.children[i].innerHTML = ''; // Clear existing content
+    visitorCountElement.children[i].appendChild(digitSpan);
+}
+
 
         </script>
 
