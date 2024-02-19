@@ -44,14 +44,14 @@
   
   .wave.-one {
     animation: rotate 10000ms infinite linear;
-    opacity: 5%;
-    background:#de0b4e ;
+    opacity: 20%;
+    background: #ea2c32;
   }
   
   .wave.-two {
     animation: rotate 6000ms infinite linear;
-    opacity: 10%;
-    background:#de0b4e;
+    opacity: 20%;
+    background:#ea2c32;
   }
             
     .logo{
@@ -122,7 +122,7 @@
                 
             }
             .sub-menu-wrap.open-menu{
-                max-height: 400px;
+                max-height: 450px;
                 display: block;
                 
 
@@ -372,20 +372,19 @@
 
     /* CSS for the output Acontainer */
     .output-Acontainer {
-        position: absolute;
-        top: 0;
-        left: 100%; /* Initially hidden to the right */
-        width: 100%;
-        height: 100%;
-        font-family: poppins;
-        font-size: 22px;
-        padding: 10px;
-        background-color: black;
-        color: lime;
-        line-height: 2.3; /* Adjust line height as needed */
-        letter-spacing: 0.1em;
-        animation: slideIn 20s forwards; /* Slide in from the left */
-        animation-delay: 4s;
+      position: absolute;
+    top: 0;
+    left: 100%; /* Initially hidden to the right */
+    width: 100%;
+    height: 100%;
+    font-family: poppins;
+    font-size: 22px;
+    padding: 10px;
+    background-color: black;
+    color: lime;
+    line-height: 2.3; /* Adjust line height as needed */
+    letter-spacing: 0.1em;
+    animation: slideIn 40s forwards; 
     }
 
     @keyframes slideIn {
@@ -396,6 +395,32 @@
             left: 0; /* Slide to the left */
         }
     }
+    .button {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    border: 4px solid lime; /* Border declaration */
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 30px; /* Center vertically */
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover {
+    background-color: lime; /* Change background color on hover */
+    color: #000;
+    border: 4px solid black;
+    
+}
 
 
 
@@ -1216,13 +1241,11 @@ font-size: 30px;
                                             <h3><strong>&nbsp;&nbsp;&nbsp;Leetcode</strong></h3></a>
                                 
 
-                                                <a href="https://www.codingninjas.com/studio/profile/vaishnavilugade" class="sub-menu-link" id="logout">
-                                                    <img src="https://coursereport-production.imgix.net/uploads/school/logo/1323/original/Coding_Ninjas_logo.jpeg?w=200&h=200&dpr=3&q=35">
-                                                    <h3><strong>&nbsp;&nbsp;&nbsp;Coding Ninjas</strong></h3></a>
+                                              
                                             
-                    
+                                                  </div>   
                 </div>
-            </div>
+            
             </nav>
             
             
@@ -1252,6 +1275,7 @@ font-size: 30px;
                 <pre><code class="language-golang" id="code"></code></pre> <!-- Add the code block here -->
             </div>
             <div class="output-Acontainer" id="output-Acontainer">
+              
                 <!-- Initial text or prompt can go here -->
             </div>
         </div>
@@ -1588,6 +1612,11 @@ font-size: 30px;
                     <img src="https://leetcode.com/static/images/badges/2024/gif/2024-02.gif" style="width:100%">
                   
                   </div>
+                  <div class="mySlides fade">
+                  
+                    <img src="https://assets.leetcode.com/static_assets/marketing/2024-50.gif" style="width:100%">
+                  
+                  </div>
                 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a>
@@ -1601,6 +1630,7 @@ font-size: 30px;
                   <span class="dot" onclick="currentSlide(3)"></span> 
                   <span class="dot" onclick="currentSlide(4)"></span> 
                   <span class="dot" onclick="currentSlide(5)"></span> 
+                  <span class="dot" onclick="currentSlide(6)"></span>
                   <span class="dot" onclick="currentSlide(6)"></span>
                 </div>
         </section>
@@ -1694,8 +1724,8 @@ font-size: 30px;
   <div class="visitor-count">
       <div class="rainbow-square"><span class="rainbow" id="digit1">0</span></div> <!-- Rainbow square for digit 0 -->
       <div class="rainbow-square"><span class="rainbow" id="digit2">0</span></div> <!-- Rainbow square for digit 0 -->
-      <div class="rainbow-square"><span class="rainbow" id="digit3">0</span></div> <!-- Rainbow square for digit 0 -->
-      <div class="rainbow-square"><span class="rainbow" id="digit4">0</span></div>
+      <div class="rainbow-square"><span class="rainbow" id="digit3">2</span></div> <!-- Rainbow square for digit 0 -->
+      <div class="rainbow-square"><span class="rainbow" id="digit4">1</span></div>
       <div class="rainbow-square"><span class="rainbow" id="digit4">0</span></div>
       
   </div>
@@ -1781,27 +1811,34 @@ font-size: 30px;
 }
 
 
-        function displayOutput() {
-            // Simulate output text (you can replace this with actual output)
-            const outputText = [
-                "(c) Microsoft Corporation. All rights reserved.",
-                "C:\Users> go run Main.go",
-                "Hello👋,",
-                "🌟I'm Vaishnavi Lugade,",
-                "🌱currently pursuing : ",
-                "➜ COMPUTER SCIENCE ENGINEERING.",
-                "➜ ARTIFICIAL INTELLIGENCE & MACHINE LEARNING.",
-                "🚀a 2024 graduate student from SKNSCOE.",
-                "🖥️ Always intrested in Coding.",
-                "💡enjoy learning and exploring new technologies."
-            ];
+function displayOutput() {
+    // Simulate output text (you can replace this with actual output)
+    const outputText = [
+        "(c) Microsoft Corporation. All rights reserved.",
+        "C:\\Users> go run Main.go",
+        "Hello👋,",
+        "🌟I'm Vaishnavi Lugade,",
+        "🌱currently pursuing : ",
+        "➦ COMPUTER SCIENCE ENGINEERING.",
+        "➦ ARTIFICIAL INTELLIGENCE & MACHINE LEARNING.",
+        "🚀a 2024 graduate student from SKNSCOE.",
+        "🖥️ Always intrested in Coding.",
+        "💡enjoy learning and exploring new technologies."
+    ];
 
-            // Create separate <p> elements for each statement
-            const outputHtml = outputText.map(text => `<p>${text}</p>`).join("");
+    // Create separate <p> elements for each statement
+    const outputHtml = outputText.map(text => `<p>${text}</p>`).join("");
 
-            // Set the innerHTML of the outputAcontainer
-            outputAcontainer.innerHTML = `<div class="centered">${outputHtml}</div>`;
-        }
+    // Set the innerHTML of the outputAcontainer
+    outputAcontainer.innerHTML = `<div class="centered">${outputHtml}</div>`;
+    
+    // Append the button after the output text
+    outputAcontainer.innerHTML += `<a href="https://drive.google.com/file/d/1xFNf4YU4eNsOkm1PH6PKwgpPKeyx5JvH/view" class="button">Download Resume&nbsp;<svg xmlns="http://www.w3.org/2000/svg" margin-left:"-40"  width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+</svg></a> `;
+}
+
 
         
 
@@ -2182,6 +2219,8 @@ for (let i = 0; i < countString.length; i++) {
     visitorCountElement.children[i].innerHTML = ''; // Clear existing content
     visitorCountElement.children[i].appendChild(digitSpan);
 }
+
+
 
 
         </script>
