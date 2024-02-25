@@ -64,6 +64,23 @@
             .logo:hover{
               color:#eceaff;
             }
+            .highlight{
+                font-size:2rem;
+                text-align:center;
+                font-family:  sans-serif;
+            }
+            .highlight span {
+	            color: rgb(9, 9, 9);
+	            text-shadow: 0 0 0 rgb(0, 0, 0);
+	            animation: highlight 3s ease-in-out infinite alternate;
+            }
+
+            @keyframes highlight {
+                to {
+                    text-shadow: 0px 0 50px #fff;
+                    color: rgb(245, 244, 241);
+                 }
+            } 
             .hero{
               
                 width: 100%;
@@ -265,7 +282,7 @@
     .resume-button {
   margin-top: -590px;
   background-color: #0c1210;
-  color: #fff;
+  color: lime;
   z-index: 100;
   padding: 10px 20px;
   border: none;
@@ -644,9 +661,9 @@ section {
         }
         .butterfly {
             position: absolute;
-            margin-top: -80px; /* Add margin from the top */
-            right: 170px;
-            width: 70px;
+            margin-top: -100px; /* Add margin from the top */
+            right: 150px;
+            width: 100px;
             height: auto;
         }
 
@@ -1194,8 +1211,8 @@ font-size: 30px;
           
             <nav>
                 <div class="logo">
-                <h2 onclick="location.reload();" style="cursor: pointer;"><a href="https://vaishnavilugade.github.io" style="text-decoration: none; color: #FCA311;">Vaishnavi<span  style="color: white">Lugade.</span></a></h2>
-                </div>
+                    <h2 class="highlight" onclick="location.reload();" style="cursor: pointer;"><a href="https://vaishnavilugade.github.io" style="text-decoration: none"></a>VaishnaviLugade</h2>
+                  </div>
                 <ul>
                   
                     
@@ -1218,27 +1235,27 @@ font-size: 30px;
                     
                     <a href="https://github.com/vaishnavilugade" class="sub-menu-link">
                         <img src="http://cdn.onlinewebfonts.com/svg/download_258190.png">
-                        <h3><strong>&nbsp;&nbsp;&nbsp;Github</strong></h3></a>
+                        <h3>&nbsp;&nbsp;&nbsp;Github</h3></a>
                         
                         <a href="https://www.linkedin.com/in/vaishnavi-lugade-6351a8228/" class="sub-menu-link">
                             <img src="https://tse2.mm.bing.net/th?id=OIP.w_zDkEJ9aLiWR-g0rff8hwHaHa&pid=Api&P=0&h=180">
-                            <h3><strong>&nbsp;&nbsp;Linkedin</strong></h3></a>
+                            <h3>&nbsp;&nbsp;Linkedin</h3></a>
                             
                             <a href="https://www.hackerearth.com/@vaishnavilugade" class="sub-menu-link">
                                 <img src="https://images.saasworthy.com/tr:w-200,h-0/hackerearth_9253_logo_1596603366_wm6ce.png">
-                                <h3><strong>Hackerearth</strong></h3></a>
+                                <h3>Hackerearth</h3></a>
                                 
                                 <a href="https://www.hackerrank.com/vaishnavilugade?hr_r=1" class="sub-menu-link" id="logout">
                                     <img src="https://tse3.mm.bing.net/th?id=OIP.agIMyTnd_rFdVu5z2VqCagHaIL&pid=Api&P=0&h=180">
-                                    <h3><strong>HackerRank</strong></h3></a>
+                                    <h3>HackerRank</h3></a>
                                     
                                     <a href="https://www.codechef.com/users/vaishnvilugade" class="sub-menu-link" id="logout">
                                         <img src="https://soumyadipghorai.github.io/images/coding_profile/codechef.png">
-                                        <h3><strong>&nbsp;&nbsp;Codechef</strong></h3></a>
+                                        <h3>&nbsp;&nbsp;Codechef</h3></a>
                                         
                                         <a href="https://leetcode.com/vaishnavilugade/" class="sub-menu-link" id="logout">
                                             <img src="https://assets.leetcode.com/contest/LeetCode/company_logo">
-                                            <h3><strong>&nbsp;&nbsp;&nbsp;Leetcode</strong></h3></a>
+                                            <h3>&nbsp;&nbsp;&nbsp;Leetcode</h3></a>
                                 
 
                                               
@@ -1726,7 +1743,7 @@ font-size: 30px;
       <div class="rainbow-square"><span class="rainbow" id="digit2">0</span></div> <!-- Rainbow square for digit 0 -->
       <div class="rainbow-square"><span class="rainbow" id="digit3">2</span></div> <!-- Rainbow square for digit 0 -->
       <div class="rainbow-square"><span class="rainbow" id="digit4">1</span></div>
-      <div class="rainbow-square"><span class="rainbow" id="digit4">0</span></div>
+      <div class="rainbow-square"><span class="rainbow" id="digit4">8</span></div>
       
   </div>
   <img class="butterfly" src="http://bestanimations.com/Animals/Insects/Butterflys/butterfly-animated-gif-45.gif" alt="butterfly"> <!-- Butterfly GIF -->
@@ -1777,7 +1794,7 @@ font-size: 30px;
             )
 
             func main() {
-                introduction := make(char string)
+                introduction := make(chan string)
 
                 go func() {
                     introduction <- "Hello, I'm Vaishnavi."
@@ -2202,7 +2219,7 @@ function showimages() {
 let visitorCount = localStorage.getItem('visitorCount');
 
 if (visitorCount === null) {
-    visitorCount = 0;
+    visitorCount = 218;
 }
 
 // Update visitor count
@@ -2220,7 +2237,22 @@ for (let i = 0; i < countString.length; i++) {
     visitorCountElement.children[i].appendChild(digitSpan);
 }
 
+// Get the element with the class "highlight"
+var element = document.querySelector('.highlight');
 
+// Get the text content of the element
+var text = element.textContent;
+
+// Create a new HTML content with each character wrapped in a span
+var htmlContent = text.split('').map(function(char, index) {
+  // Calculate animation delay for each span
+  var animationDelay = (index + 1) * 0.1;
+  // Wrap each character in a span with animation-delay
+  return '<span style="animation-delay: ' + animationDelay.toFixed(1) + 's;">' + char + '</span>';
+}).join('');
+
+// Set the new HTML content back to the element
+element.innerHTML = htmlContent;
 
 
         </script>
