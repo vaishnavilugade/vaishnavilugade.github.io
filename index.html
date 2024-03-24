@@ -14,18 +14,17 @@
             *{
                 margin: 0;
                 padding: 0;
-                font-family:'Poppins','sans-serif';
                 box-sizing: border-box;
             }
             body {
-      display:flex;
-      
-      height: 100vh;
-      margin: 0;
-      background-color: #eceaff;
-      color: #333333;
-      font-family: 'Helvetica Neue', sans-serif;
-    }
+                display:flex;
+                height: 100vh;
+                margin: 0;
+                background-color: #eceaff;
+                color: #333333;
+                font-family: "Comic Sans MS", "Comic Sans", cursive;
+            }
+            
 
     .wave {
     position: absolute;
@@ -67,7 +66,7 @@
             .highlight{
                 font-size:2rem;
                 text-align:center;
-                font-family:  sans-serif;
+                font-family: "Comic Sans MS", "Comic Sans", cursive;
             }
             .highlight span {
 	            color: rgb(9, 9, 9);
@@ -377,7 +376,7 @@
         left: -40px;
         width: 120%;
         height: 100%;
-        font-family: poppins;
+        font-family: sans-serif;
         font-size: 15px;
         padding: 10px;
         line-height: 0.8; /* Adjust line height as needed */
@@ -508,7 +507,7 @@ margin: 0 auto 60px auto;
 .single-service h3 {
   font-size: 25px;
   text-transform: uppercase;
-  font-family: poppins;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   letter-spacing: 1px;
   color: #262626;
 }
@@ -931,14 +930,113 @@ font-size: 30px;
     button:hover {
       background-color: #31efa0;
     }
-  
-       /* certification-container */
-.imageshow-container {
-  max-width: 900px;
+    #slider {
   position: relative;
-  margin: auto;
+  width: 60%;
+  height: 32vw;
+  margin: 150px auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  perspective: 1400px;
+  transform-style: preserve-3d;
 }
 
+input[type=radio] {
+  position: relative;
+  top: 115%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+  opacity: 0.4;
+  transform: translateX(-83px);
+  cursor: pointer;
+  
+}
+
+
+input[type=radio]:nth-child(5) {
+  margin-right: 0px;
+}
+
+input[type=radio]:checked {
+  opacity: 1;
+}
+
+
+
+
+#slider label,
+#slider label img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color:#eceaff;
+  font-size: 70px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 400ms ease;
+}
+
+
+
+/* Slider Functionality */
+
+/* Active Slide */
+#s1:checked ~ #slide1,
+ #s2:checked ~ #slide2,
+  #s3:checked ~ #slide3,
+   #s4:checked ~ #slide4,
+    #s5:checked ~ #slide5 {
+  box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+  transform: translate3d(0%, 0, 0px);
+}
+
+/* Next Slide */
+#s1:checked ~ #slide2,
+ #s2:checked ~ #slide3,
+  #s3:checked ~ #slide4,
+   #s4:checked ~ #slide5,
+    #s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(20%, 0, -100px);
+}
+
+
+/* Next to Next Slide */
+#s1:checked ~ #slide3,
+ #s2:checked ~ #slide4,
+  #s3:checked ~ #slide5,
+   #s4:checked ~ #slide1,
+    #s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(40%, 0, -250px);
+}
+
+/* Previous to Previous Slide */
+#s1:checked ~ #slide4,
+ #s2:checked ~ #slide5,
+  #s3:checked ~ #slide1,
+   #s4:checked ~ #slide2,
+    #s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(-40%, 0, -250px);
+}
+
+/* Previous Slide */
+#s1:checked ~ #slide5,
+ #s2:checked ~ #slide1,
+  #s3:checked ~ #slide2,
+   #s4:checked ~ #slide3,
+    #s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(-20%, 0, -100px);
+}
 
 
 /* Number describe (1/3 etc) */
@@ -1071,17 +1169,17 @@ font-size: 30px;
   .ssc {
     
     bottom: 40px;
-    left: 120px;
+    left: 90px;
     
   }
   .hsc {
     top: 180px;
-    right: 110px;
+    right: 90px;
     
   }
   .be {
     top: 40px;
-    left: 120px;
+    left: 90px;
     
   }
   @keyframes milestoneAnimation {
@@ -1124,7 +1222,7 @@ font-size: 30px;
     border: 10px solid #ccc;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(209, 134, 134, 0.1);
     text-align: center; 
   }
   #animation-container {
@@ -1220,13 +1318,12 @@ font-size: 30px;
                         <span class="logo"><i class="icon moon fas fa-moon" style="display:none;"></i></span>-->
                    
                 
-                    <li><a  onclick="scrollToSection('section-home')">HOME 🏡</a></li>
-                    <li><a PROFILE onclick="scrollToSection('section-about')">PROFILE 🌟</a></li>
-                    <li><a onclick="scrollToSection('section-projects')" >CREATIONS 🚀</a></li>
-                    <li><a onclick="scrollToSection('section-skills')">ABILITIES 🛠️
-                    </a></li>
-                    <li><a onclick="scrollToSection('section-badge')">BADGES 🏅</a></li>
-                    <li><a onclick="scrollToSection('section-contact')">Q&A BOT 🤖</a></li>
+                    <li><a  onclick="scrollToSection('section-home')">HOME </a></li>
+                    <li><a PROFILE onclick="scrollToSection('section-about')">PROFILE </a></li>
+                    <li><a onclick="scrollToSection('section-projects')" >CREATIONS </a></li>
+                    <li><a onclick="scrollToSection('section-skills')">ABILITIES </a></li>
+                    <li><a onclick="scrollToSection('section-badge')">BADGES </a></li>
+                    <li><a onclick="scrollToSection('section-contact')">Q&A BOT</a></li>
                 </ul>
                 <img src="https://tse4.mm.bing.net/th?id=OIP.OmJcGriFE8bKg9-DtdlfbwHaHa&pid=Api&P=0" class="user-pic" onclick="vaishnavi()">
                 
@@ -1303,99 +1400,28 @@ font-size: 30px;
           About</h2>
           <div class="line">
           </div>
-        <div class="imageshow-container">
+          <div id="slider">
+  <input type="radio" name="slider" id="s1" checked>
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3">
+  <input type="radio" name="slider" id="s4">
+  <input type="radio" name="slider" id="s5">
 
-            <div class="myimages fade">
-              
-              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/codealpha.jpeg?raw=true" style="width:100%">
-              
-            </div>
+  <label for="s1" id="slide1"><img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/coordinator.jpeg?raw=tru" alt=""></label>
+            <label for="s2" id="slide2"><img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/python.jpeg?raw=true" alt=""></label>
+            <label for="s3" id="slide3"><img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/java.jpeg?raw=true" alt=""></label>
+            <label for="s4" id="slide4"><img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/hackathon.jpeg?raw=true" alt=""></label>
+            <label for="s5" id="slide5"><img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/go.png?raw=true" alt=""></label>
+        </div>
+        
             
-            <div class="myimages fade">
+           
               
-              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/Agile.png?raw=true" style="width:100%">
               
-            </div>
-            
-            <div class="myimages fade">
               
-              <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/letsgrowmore.jpeg?raw=true" style="width:100%">
-              
-            </div>
-
-            <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/sparks.jpeg?raw=true" style="width:100%">
-                
-              </div>
-              
-              <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/coordinator.jpeg?raw=true" style="width:100%">
-                <div class="describe">Caption Two</div>
-              </div>
-              
-              <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/oasis.jpeg?raw=true" style="width:100%">
-                
-              </div>
-
-              <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/DSES.png?raw=true" style="width:100%">
-                
-              </div>
-              
-              <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/social%20worker.jpeg?raw=true" style="width:100%">
-               
-              </div>
-              
-              <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/python.jpeg?raw=true" style="width:100%">
-                
-              </div>
-
-              <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/java.jpeg?raw=true" style="width:100%">
-                
-              </div>
-              
-              <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/hackathon.jpeg?raw=true" style="width:100%">
-                
-              </div>
-              
-              <div class="myimages fade">
-                
-                <img src="https://github.com/vaishnavilugade/vaishnavilugade.github.io/blob/main/go.png?raw=true" style="width:100%">
-                
-              </div>
-
 
             
-            </div>
-            <br>
             
-            <div style="text-align:center">
-              <span class="bullets"></span> 
-              <span class="bullets"></span> 
-              <span class="bullets"></span> 
-              <span class="bullets"></span> 
-              <span class="bullets"></span> 
-              <span class="bullets"></span>
-              <span class="bullets"></span> 
-              <span class="bullets"></span> 
-              <span class="bullets"></span>
-              <span class="bullets"></span> 
-              <span class="bullets"></span> 
-              <span class="bullets"></span>
-            </div>
           
           
     
@@ -1456,123 +1482,234 @@ font-size: 30px;
           PROJECTS</h2>
           <div class="line">
           </div>
-          <div class="single-service">
-            <div class="social">
-      <i class="fa fa-cogs"></i></div>
-          <span></span>
-                 <h3>
-                    Python Turtle Art: Chatrapati Shivaji Maharaj</h3>
-          <p>
-            The "Python Turtle Art: Chatrapati Shivaji Maharaj" project involves using Python's Turtle graphics to create a visual representation of the great Maratha warrior, Chatrapati Shivaji Maharaj.</p>          </div>
-            <div class="single-service">
-                <div class="social">
-          <i class="fa fa-cogs"></i></div>
-          <span></span>
-                 <h3>
-          temperature converter</h3>
-          <p>
-            The temperature converter website is a user-friendly tool that allows users to convert temperatures between Fahrenheit, Celsius, and Kelvin units.user will input a temperature in either fahrenheit/celsius/kelvin and then click on submit button. The converted temperature will be displayed in the output.</p>          </div>
-          <div class="single-service">
-                <div class="social">
-          <i class="fa fa-cogs"></i></div>
-          <span></span>
-                 <h3>
-          Basic banking application</h3>
-          <p>
-            I have created a basic baking app. <br>FLOW OF APPLICATION: Home Screen>View all Customers>Select andview one customer>Transfer money>Select one Customerto transfer money>view Data</p>
-          </div>
-          
-<h1>................................................................................................................................................</h1><br>
-          <div class="single-service">
+          <h1 style="font-size: 29px; text-align: center;">
+            <span style="color: black;">★</span> <span style="color: #ea2c32;">WEB BASED PROJECTS</span> <span style="color: black;">★</span>
+        </h1>&nbsp;
+        <h1>   </h1>
+
+        <div class="single-service">
             <div class="social">
       <i class="fa fa-cogs"></i></div>
       <span></span>
-                 <h3>
-                    Scientific calculator</h3>
-          <p>
-            implementation of scientific calculator in Java using the Swing library. The calculator provides a graphical user interface (GUI) for performing various mathematical calculations.</p>          </div>
-          <div class="single-service">
-                <div class="social">
-          <i class="fa fa-cogs"></i></div>
-          <span></span>
-                 <h3>
-                    cancer detection using ML</h3>
-          <p>
-            The Breast Cancer Detection System is an application developed to predict whether an input image represents a breast with cancer or not. It utilizes a deep learning model trained on a dataset of breast images to provide accurate predictions.</p>          </div>
-          <div class="single-service">
-                <div class="social">
-          <i class="fa fa-cogs"></i></div>
-          <span></span>
-                 <h3>
-                    Titanic survival prediction using ML</h3>
-          <p>
-            In this project,"Titanic Survival Prediction," which involved predicting the survival outcomes of passengers aboard the ill-fated RMS Titanic. providing the highest mean cross-validation accuracy of approximately 83.84%.</p>
-          </p>
-          </div>
-          <h1>................................................................................................................................................</h1><br>
-         
-      <div class="single-service">
-                <div class="social">
-          <i class="fa fa-cogs"></i></div>
-          <span></span>
-                 <h3>
-          TIC-TAC-TOE Game</h3>
-          <p>
-            The Tic Tac Toe GUI game was implemented using Java, and it leverages the Swing library to build a graphical user interface for the game. Swing is a Java API that provides components like buttons, labels, and panels to create interactive graphical applications.</p></div>          
-          <div class="single-service">
-                <div class="social">
-          <i class="fa fa-cogs"></i></div>
-          <span></span>
-                 <h3>
-          Chatbot for sknscoe</h3>
-          <p>
-            The creation of a chatbot for SKNSCOE involves developing an interactive software program that simulates human-like conversations to assist and engage with students, faculty, and other users associated with the college. The chatbot serves as  providing information, answering queries on various topics related to the college.</p></div>
-          <div class="single-service">
+             <h3>
+      temperature converter</h3>
+      <p>
+        A user-friendly temperature converter website facilitates the conversion of temperatures between Fahrenheit, Celsius, and Kelvin units with input options for each and instant output display.</p>          </div>
+      
+
+        <div class="single-service">
             <div class="social">
       <i class="fa fa-cogs"></i></div>
       <span></span>
              <h3>
       house rental system</h3>
       <p>
-        The main objective of this project is to help people to find rental houses. This project is useful for people who want to rent a house according to their needs and budget.
-        In that first user has to register whether he is a tenant or an owner. He can then login and view their activities and also view locations.</p>      </div>
-        <h1>................................................................................................................................................</h1><br>
-
-
-        <div class="single-service">
-            <div class="social">
-      <i class="fa fa-cogs"></i></div>
-      <span></span>
-             <h3>Python Turtle Art: Ram Mandir Ayodhya
-      </h3>
-      <p>
-        The "Python Turtle Art: Ram Mandir Ayodhya" project involves using Python's Turtle graphics to create a visual representation of Ram Mandir Ayodhya.</p>      </div>
-        <div class="single-service">
-            <div class="social">
-      <i class="fa fa-cogs"></i></div>
-      <span></span>
-             <h3>
-                Python Turtle Art:Lord Krishna</h3>
-      <p>
-        The "Python Turtle Art: Lord Krishna" project involves using Python's Turtle graphics to create a visual representation of Lord Krishna.</p>      </div>
-        <div class="single-service">
-            <div class="social">
-      <i class="fa fa-cogs"></i></div>
-      <span></span>
-             <h3>
-      Face Detecion AI</h3>
-      <p>
-        A face detection project uses algorithms to find and locate human faces in images or video. It analyzes visual data to identify facial features, like eyes and mouth, allowing it to determine where faces are in the input and calculate how many faces are detected.</p>      </div>
-
+        A rental house management system facilitating users to register as tenants or owners, enabling them to log in, view activities, and explore available locations based on their preferences and budget.</p>      </div>
         
-        </div>
 
-        <h1>................................................................................................................................................</h1><br>
+        <div class="single-service">
+            <div class="social">
+      <i class="fa fa-cogs"></i></div>
+      <span></span>
+             <h3>
+      Online HTML Editor</h3>
+      <p>
+        online HTML editor provides a convenient platform for creating, editing, and previewing HTML code in real-time. With a user-friendly interface and essential features, it offers a seamless experience.</p>      </div>&nbsp;
+        
+</div>
+
+<div class="box"></div>
+
+
+<div class="box">
+
+</div>
+<div class="wrapper" id="section-projects">
+    <h2 style="color:#eceaff ;">
+  PROJECTS</h2>
+  <!-- <div class="line">
+  </div>-->
+  <h1 style="font-size: 29px; text-align: center;">
+    <span style="color: black;">★</span> <span style="color: #ea2c32;">JAVA PROJECTS</span> <span style="color: black;">★</span>
+</h1>&nbsp;
+<h1>   </h1>
+
+
+<div class="single-service">
+    <div class="social">
+<i class="fa fa-cogs"></i></div>
+<span></span>
+         <h3>
+            Scientific calculator</h3>
+  <p>
+    implementation of scientific calculator in Java using the Swing library. The calculator provides a graphical user interface (GUI) for performing various mathematical calculations.</p>          </div>
+  
+
+
+    <div class="single-service">
+        <div class="social">
+  <i class="fa fa-cogs"></i></div>
+  <span></span>
+         <h3>
+  TIC-TAC-TOE Game</h3>
+  <p>
+    The Tic Tac Toe GUI game was implemented using Java, and it leverages the Swing library to build a graphical user interface for the game. Swing is a Java API that provides components like buttons, labels, and panels to create interactive graphical applications.</p></div>          
+  
+    <div class="single-service">
+        <div class="social">
+  <i class="fa fa-cogs"></i></div>
+  <span></span>
+         <h3>
+  Currency Converter</h3>
+  <p>
+    This Java program implements a simple currency converter. It features a graphical user interface (GUI) created using Swing components. Users can input a currency amount and select either USD or INR as the currency type</p></div>          
+  
+
+</div>
+
+<div class="box">
+
+</div>
+<div class="wrapper" id="section-projects">
+    <h2 style="color:#eceaff ;">
+  PROJECTS</h2>
+  <!-- <div class="line">
+  </div>-->
+  <h1 style="font-size: 29px; text-align: center;">
+    <span style="color: black;">★</span> <span style="color: #ea2c32;">PYTHON PROJECTS</span> <span style="color: black;">★</span>
+</h1>&nbsp;
+<h1>   </h1>
+
+
+<div class="single-service">
+    <div class="social">
+<i class="fa fa-cogs"></i></div>
+  <span></span>
+         <h3>
+            Python Turtle Art: Chatrapati Shivaji Maharaj</h3>
+  <p>
+    The "Python Turtle Art: Chatrapati Shivaji Maharaj" project involves using Python's Turtle graphics to create a visual representation of the great Maratha warrior, Chatrapati Shivaji Maharaj.</p>          </div>
+    
+    <div class="single-service">
+        <div class="social">
+  <i class="fa fa-cogs"></i></div>
+  <span></span>
+         <h3>Python Turtle Art: Ram Mandir Ayodhya
+  </h3>
+  <p>
+    The "Python Turtle Art: Ram Mandir Ayodhya" project involves using Python's Turtle graphics to create a visual representation of Ram Mandir Ayodhya.</p>      </div>
+
+    <div class="single-service">
+        <div class="social">
+  <i class="fa fa-cogs"></i></div>
+  <span></span>
+         <h3>
+            Python Turtle Art:Lord Krishna</h3>
+  <p>
+    The "Python Turtle Art: Lord Krishna" project involves using Python's Turtle graphics to create a visual representation of Lord Krishna.</p>      </div>
+   
+
+    </div>
+
+    <div class="box">
+
+    </div>
+    <div class="wrapper" id="section-projects">
+        <h2 style="color:#eceaff ;">
+      PROJECTS</h2>
+      <!-- <div class="line">
+      </div>-->
+      <h1 style="font-size: 29px; text-align: center;">
+        <span style="color: black;">★</span> <span style="color: #ea2c32;">AIML PROJECTS</span> <span style="color: black;">★</span>
+    </h1>&nbsp;
+    <h1>   </h1>
+
+    <div class="single-service">
+        <div class="social">
+    <i class="fa fa-cogs"></i></div>
+    <span></span>
+         <h3>
+            cancer detection using ML</h3>
+    <p>
+    The Breast Cancer Detection System is an application developed to predict whether an input image represents a breast with cancer or not. It utilizes a deep learning model trained on a dataset of breast images to provide accurate predictions.</p>          </div>
+    
+    
+    <div class="single-service">
+        <div class="social">
+    <i class="fa fa-cogs"></i></div>
+    <span></span>
+         <h3>
+            Titanic survival prediction using ML</h3>
+    <p>
+    In this project,"Titanic Survival Prediction," which involved predicting the survival outcomes of passengers aboard the ill-fated RMS Titanic. providing the highest mean cross-validation accuracy of approximately 83.84%.</p>
+    </p>
+    </div>
+    <div class="single-service">
+        <div class="social">
+    <i class="fa fa-cogs"></i></div>
+    <span></span>
+         <h3>
+    Face Detecion AI</h3>
+    <p>
+    A face detection project uses algorithms to find and locate human faces in images or video. It analyzes visual data to identify facial features, like eyes and mouth, allowing it to determine where faces are in the input and calculate how many faces are detected.</p>      </div>
+    
+    
+    </div>
+    
+    <div class="box">
+
+    </div>
+    <div class="wrapper" id="section-projects">
+        <h2 style="color:#eceaff ;">
+      PROJECTS</h2>
+      <!-- <div class="line">
+      </div>-->
+      <h1 style="font-size: 29px; text-align: center;">
+        <span style="color: black;">★</span> <span style="color: #ea2c32;">ANDROID PROJECTS</span> <span style="color: black;">★</span>
+    </h1>&nbsp;
+    <h1>   </h1>
+
+
+    <div class="single-service">
+        <div class="social">
+  <i class="fa fa-cogs"></i></div>
+  <span></span>
+         <h3>
+  Basic banking application</h3>
+  <p>
+    I have created a basic baking app. <br>FLOW OF APPLICATION: Home Screen>View all Customers>Select andview one customer>Transfer money>Select one Customerto transfer money>view Data</p>
+  </div>
+
+  <div class="single-service">
+    <div class="social">
+<i class="fa fa-cogs"></i></div>
+<span></span>
+     <h3>
+Calculator</h3>
+<p>
+A simple calculator application designed to perform basic arithmetic operations such as addition, subtraction, multiplication, and division with user-friendly interface and instant results display.</p>
+</div>
+
+<div class="single-service">
+    <div class="social">
+<i class="fa fa-cogs"></i></div>
+<span></span>
+     <h3>
+To-Do List</h3>
+<p>
+A straightforward to-do list application allowing users to create, manage, and organize tasks efficiently with features like task prioritization and completion tracking..</p>
+</div>
+</div>
+         
+
         
         
         <div class='box'>
          
         </div>
+        <div class="wrapper" id="section-skills">
+          <h2 style="color:#eceaff ;">
+        Skills</h2></div>
         <div class="wrapper" id="section-skills">
             <h2>
           skills</h2>
@@ -1583,7 +1720,7 @@ font-size: 30px;
           </div>
           </div>
           
-          <h1>................................................................................................................................................</h1><br>
+          
           <div class="wrapper" id="section-badge">
             <h2>
            Badges</h2>
@@ -1718,7 +1855,7 @@ font-size: 30px;
         
         <div class="wrapper" id="section-contact">
             <h2>
-              Quick Info 🤖</h2>
+              Quick Info </h2>
           <div class="line">
           </div>
           <div class="chatbot-container">
@@ -1737,7 +1874,7 @@ font-size: 30px;
 
 
 <footer>
-  <p>&copy; 2022 All rights reserved by Vaishnavi Lugade</p>
+  <p>&copy; 2022 All rights reserved by Vaishnavi Lugade .</p>
   <div class="visitor-count">
       <div class="rainbow-square"><span class="rainbow" id="digit1">0</span></div> <!-- Rainbow square for digit 0 -->
       <div class="rainbow-square"><span class="rainbow" id="digit2">0</span></div> <!-- Rainbow square for digit 0 -->
